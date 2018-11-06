@@ -1,13 +1,15 @@
 // @flow
 
 import React from 'react';
-import { Route } from 'react-router-dom';
-import { Switch } from 'react-router';
+import { MemoryRouter } from 'react-router';
+import {
+  Switch,
+  Route,
+} from 'react-router-dom';
 import debug from 'debug';
 import { hot } from 'react-hot-loader';
 import { StyleRoot } from 'radium';
 import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
 
 // Containers
 import MainBoard from './containers/MainBoard.jsx';
@@ -28,17 +30,16 @@ const styles = {
 
 function App({
   store,
-  history,
 }: any) {
   return (
     <Provider store={store}>
-      <StyleRoot style={styles.root}>
-        <ConnectedRouter history={history}>
+      <MemoryRouter>
+        <StyleRoot style={styles.root}>
           <Switch>
-            <Route component={MainBoard} />
+            <Route path="/" component={MainBoard} />
           </Switch>
-        </ConnectedRouter>
-      </StyleRoot>
+        </StyleRoot>
+      </MemoryRouter>
     </Provider>
   );
 }

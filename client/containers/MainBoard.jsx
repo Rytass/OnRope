@@ -1,6 +1,12 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import {
+  Switch,
+  Route,
+  Redirect,
+} from 'react-router-dom';
+import MainPage from './MainPage.jsx';
 
 const styles = {
   placement: {
@@ -11,7 +17,7 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'column',
     position: 'relative',
-    backgroundColor: '#000',
+    backgroundColor: '#fff',
   },
   main: {
     width: '100%',
@@ -42,7 +48,10 @@ class MainBoard extends PureComponent<Props> {
       <div style={styles.placement}>
         <main style={styles.main}>
           <div style={styles.mainWrapper}>
-            TAAAAA
+            <Switch>
+              <Route path="/" component={MainPage} />
+              <Redirect to="/" />
+            </Switch>
           </div>
         </main>
       </div>
