@@ -1,7 +1,9 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import radium from 'radium';
 import Header from '../components/Header.jsx';
+import NaviButton from '../components/NaviButton.jsx';
 import CourseIntroduction from './CourseIntroduction.jsx';
 
 const styles = {
@@ -40,41 +42,6 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     margin: '23px 0 74px 0',
-  },
-  itemWrapper: {
-    width: '100%',
-    display: 'flex',
-    flexDirection: 'row',
-    justifyContent: 'flex-end',
-    alignItems: 'center',
-    margin: '0 0 12px 0',
-  },
-  itemActived: {
-    fontSize: 12,
-    color: '#F2F2F2',
-    fontWeight: 'bold',
-    letterSpacing: 1,
-  },
-  itemDefault: {
-    fontSize: 12,
-    color: '#fff',
-    opacity: 0.38,
-    fontWeight: 'bold',
-  },
-  circleActived: {
-    width: 8,
-    height: 8,
-    margin: '0 0 0 12px',
-    borderRadius: '50%',
-    backgroundColor: '#fff',
-  },
-  circleDefault: {
-    width: 8,
-    height: 8,
-    margin: '0 0 0 12px',
-    borderRadius: '50%',
-    backgroundColor: '#fff',
-    opacity: 0.37,
   },
   landingSection2: {
     width: '100%',
@@ -129,46 +96,16 @@ class MainPage extends PureComponent<Props> {
             </p>
           </div>
           <div style={styles.sideBarWrapper}>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemActived}>首頁</p>
-              <div style={styles.circleActived} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>創立緣由</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>課程介紹</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>繩索垂直舞蹈</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>場地介紹</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>裝備介紹＆代購商品</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>教練介紹</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>事件回顧</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>到府教學</p>
-              <div style={styles.circleDefault} />
-            </div>
-            <div style={styles.itemWrapper}>
-              <p style={styles.itemDefault}>場地位置</p>
-              <div style={styles.circleDefault} />
-            </div>
+            <NaviButton text="首頁" isActived />
+            <NaviButton text="創立緣由" isActived={false} />
+            <NaviButton text="課程介紹" isActived={false} />
+            <NaviButton text="繩索垂直舞蹈" isActived={false} />
+            <NaviButton text="場地介紹" isActived={false} />
+            <NaviButton text="裝備介紹＆代購商品" isActived={false} />
+            <NaviButton text="教練介紹" isActived={false} />
+            <NaviButton text="事件回顧" isActived={false} />
+            <NaviButton text="到府教學" isActived={false} />
+            <NaviButton text="場地位置" isActived={false} />
           </div>
         </div>
         <div style={styles.landingSection2}>
@@ -191,4 +128,4 @@ class MainPage extends PureComponent<Props> {
   }
 }
 
-export default MainPage;
+export default radium(MainPage);
