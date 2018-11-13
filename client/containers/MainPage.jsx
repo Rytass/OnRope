@@ -8,6 +8,7 @@ import CourseSection from '../components/CourseSection.jsx';
 import FieldSection from '../components/FieldSection.jsx';
 import EquipmentSection from '../components/EquipmentSection.jsx';
 import RentSection from '../components/RentSection.jsx';
+import ConnectionSection from '../components/ConnectionSection.jsx';
 
 const styles = {
   wrapper: {
@@ -34,6 +35,7 @@ class MainPage extends PureComponent<Props> {
         <FieldSection />
         <EquipmentSection />
         <RentSection />
+        <ConnectionSection />
       </div>
     );
   }
