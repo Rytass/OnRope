@@ -4,6 +4,7 @@ import React, { PureComponent } from 'react';
 import Header from '../components/Header.jsx';
 import SlideShow from '../components/SlideShow.jsx';
 import ReasonSection from '../components/ReasonSection.jsx';
+import CourseSection from '../components/CourseSection.jsx';
 
 const styles = {
   wrapper: {
@@ -26,6 +27,7 @@ class MainPage extends PureComponent<Props> {
         <Header />
         <SlideShow />
         <ReasonSection />
+        <CourseSection />
       </div>
     );
   }
