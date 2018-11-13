@@ -6,6 +6,7 @@ import radium from 'radium';
 const styles = {
   wrapper: {
     width: 210,
+    margin: '0 12px',
   },
   image: {
     width: 210,

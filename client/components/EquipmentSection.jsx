@@ -38,10 +38,9 @@ const styles = {
   },
   imagesWrapper: {
     width: '100%',
-    padding: '0 147px',
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'center',
     margin: '0 0 56px 0',
   },
   footer: {
