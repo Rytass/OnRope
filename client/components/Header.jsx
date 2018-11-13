@@ -15,6 +15,7 @@ const styles = {
     alignItems: 'center',
     padding: '0 32px',
     backgroundColor: '#343534',
+    zIndex: 10,
   },
   logoText: {
     width: 111,

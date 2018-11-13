@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import Header from '../components/Header.jsx';
+import SlideShow from '../components/SlideShow.jsx';
 
 const styles = {
   wrapper: {
@@ -22,6 +23,7 @@ class MainPage extends PureComponent<Props> {
     return (
       <div style={styles.wrapper}>
         <Header />
+        <SlideShow />
       </div>
     );
   }
