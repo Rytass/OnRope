@@ -17,7 +17,7 @@ const styles = {
     justifyContent: 'flex-start',
     flexDirection: 'column',
     position: 'relative',
-    backgroundColor: '#fff',
+    backgroundColor: '#1a2426',
   },
   main: {
     width: '100%',

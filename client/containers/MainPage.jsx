@@ -1,17 +1,15 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import Header from '../components/Header.jsx';
 
 const styles = {
   wrapper: {
-    height: 750,
-    padding: 8,
     width: '100%',
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
-    position: 'relative',
   },
 };
 
@@ -23,7 +21,7 @@ class MainPage extends PureComponent<Props> {
   render() {
     return (
       <div style={styles.wrapper}>
-        1233
+        <Header />
       </div>
     );
   }
