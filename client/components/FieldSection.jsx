@@ -17,7 +17,7 @@ const styles = {
     backgroundColor: '#212121',
   },
   title: {
-    fontSize: 32,
+    fontSize: 36,
     fontWeight: 600,
     letterSpacing: 1.5,
     color: '#2fa3c4',
