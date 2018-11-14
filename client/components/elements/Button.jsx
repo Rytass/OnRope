@@ -13,6 +13,9 @@ const styles = {
   highter: {
     height: 58,
   },
+  thin: {
+    width: 256,
+  },
   link: {
     textDecoration: 'none',
   },
@@ -36,15 +39,18 @@ function Button({
   url,
   text,
   isHigher,
+  isThin,
 }: {
   url: string,
   text: string,
   isHigher: boolean,
+  isThin: boolean,
 }) {
   return (
     <div style={[
       styles.wrapper,
       isHigher && styles.highter,
+      isThin && styles.thin,
     ]}>
       <a
         style={styles.link}

@@ -96,7 +96,7 @@ function NightSection() {
             <p style={styles.infoText}>NT$9,000元</p>
             <p style={styles.infoText}>7堂 / 共計28小時</p>
           </div>
-          <Button text="立即報名" url="https://www.google.com" />
+          <Button text="立即報名" url="https://www.google.com" isThin />
         </div>
       </div>
       <div style={styles.image} />

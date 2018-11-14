@@ -147,7 +147,7 @@ function VerticalSection() {
               <p style={styles.infoText}>NT$18,000元</p>
               <p style={styles.infoText}>4週 / 共計16小時</p>
             </div>
-            <Button text="立即報名" url="https://www.google.com" />
+            <Button text="立即報名" url="https://www.google.com" isThin />
           </div>
         </div>
       </div>
