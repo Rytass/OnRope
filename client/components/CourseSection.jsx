@@ -6,6 +6,7 @@ import Button from './elements/Button.jsx';
 import classPhoto1 from '../static/images/class-photo-01.png';
 import classPhoto2 from '../static/images/class-photo-02.png';
 import classPhoto3 from '../static/images/class-photo-03.png';
+import CourseContentSection from './CourseContentSection.jsx';
 import NightSection from './NightSection.jsx';
 import VerticalSection from './VerticalSection.jsx';
 
@@ -147,6 +148,7 @@ function CourseSection() {
           </div>
         </div>
       </div>
+      <CourseContentSection />
       <NightSection />
       <VerticalSection />
     </div>
