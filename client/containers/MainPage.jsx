@@ -12,6 +12,7 @@ import CoachSection from '../components/CoachSection.jsx';
 import EventSection from '../components/EventSection.jsx';
 import ConnectionSection from '../components/ConnectionSection.jsx';
 import MapSection from '../components/MapSection.jsx';
+import Footer from '../components/Footer.jsx';
 
 const styles = {
   wrapper: {
@@ -42,6 +43,7 @@ class MainPage extends PureComponent<Props> {
         <EventSection />
         <ConnectionSection />
         <MapSection />
+        <Footer />
       </div>
     );
   }
