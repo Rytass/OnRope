@@ -5,6 +5,7 @@ import TextImage from './elements/TextImage.jsx';
 import classPhoto1 from '../static/images/class-photo-01.png';
 import classPhoto2 from '../static/images/class-photo-02.png';
 import classPhoto3 from '../static/images/class-photo-03.png';
+import NightSection from './NightSection.jsx';
 
 const styles = {
   wrapper: {
@@ -55,6 +56,7 @@ function CourseSection() {
           image={classPhoto3}
           imageStyle={styles.image} />
       </div>
+      <NightSection />
     </div>
   );
 }
