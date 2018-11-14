@@ -14,6 +14,7 @@ const styles = {
   },
   text: {
     textAlign: 'center',
+    fontWeight: 300,
     fontSize: 16,
     lineHeight: 1.75,
     letterSpacing: 1,

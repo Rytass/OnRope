@@ -24,6 +24,7 @@ const styles = {
     letterSpacing: 2,
     textAlign: 'center',
     color: '#1b4550',
+    margin: '0 0 32px 0',
   },
   text: {
     fontSize: 16,

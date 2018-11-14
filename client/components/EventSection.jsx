@@ -30,6 +30,7 @@ const styles = {
     fontSize: 14,
     lineHeight: 1.71,
     letterSpacing: 1,
+    fontWeight: 300,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: 0,
   },

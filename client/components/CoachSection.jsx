@@ -100,6 +100,7 @@ const styles = {
   },
   contentText: {
     fontSize: 14,
+    fontWeight: 300,
     lineHeight: '24px',
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',

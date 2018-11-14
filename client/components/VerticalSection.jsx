@@ -41,6 +41,7 @@ const styles = {
   },
   text: {
     fontSize: 16,
+    fontWeight: 300,
     lineHeight: 1.75,
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
@@ -80,6 +81,7 @@ const styles = {
   content: {
     fontSize: 16,
     lineHeight: 1.75,
+    fontWeight: 300,
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: '0 0 32px 0',

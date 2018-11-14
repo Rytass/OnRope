@@ -56,6 +56,7 @@ const styles = {
     fontSize: 16,
     lineHeight: 1.5,
     letterSpacing: 0.8,
+    fontWeight: 300,
     textAlign: 'center',
     color: 'rgba(255, 255, 255, 0.87)',
     margin: '0 0 24px 0',

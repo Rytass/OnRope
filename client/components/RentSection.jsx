@@ -39,6 +39,7 @@ const styles = {
   },
   contentText: {
     fontSize: 16,
+    fontWeight: 300,
     lineHeight: '28px',
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
@@ -46,6 +47,7 @@ const styles = {
   },
   rentContent: {
     fontSize: 16,
+    fontWeight: 300,
     lineHeight: '28px',
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
@@ -53,6 +55,7 @@ const styles = {
   },
   blueText: {
     fontSize: 16,
+    fontWeight: 600,
     lineHeight: '28px',
     letterSpacing: 1,
     color: '#45b3d2',
@@ -100,6 +103,7 @@ const styles = {
   },
   productContent: {
     fontSize: 14,
+    fontWeight: 300,
     lineHeight: '24px',
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',

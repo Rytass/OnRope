@@ -39,6 +39,7 @@ const styles = {
   subtitle: {
     fontSize: 16,
     lineHeight: 1.75,
+    fontWeight: 300,
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: 0,
