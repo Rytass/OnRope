@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 
 const styles = {
   sectionWrapper: {
@@ -26,6 +27,11 @@ const styles = {
     borderColor: '#398297',
     padding: '48px 0 36px 0',
   },
+  underLine: {
+    borderWidth: '1px 0',
+    borderStyle: 'solid',
+    borderColor: '#398297',
+  },
   eventImage: {
     width: 320,
     height: 210,
@@ -48,15 +54,17 @@ function EventItem({
   image,
   contentTitle,
   content,
+  underLine,
 }: {
   date: string,
   image: string,
   contentTitle: string,
   content: Funtion,
+  underLine: boolean,
 }) {
   return (
     <div style={styles.sectionWrapper}>
-      <div style={styles.eventWrapper}>
+      <div style={[styles.eventWrapper, underLine && styles.underLine]}>
         <h2 style={styles.dateTitle}>{date}</h2>
         <img src={image} alt="event" style={styles.eventImage} />
         <div style={styles.eventContentWrapper}>
@@ -68,4 +76,4 @@ function EventItem({
   );
 }
 
-export default EventItem;
+export default radium(EventItem);
