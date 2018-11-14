@@ -36,6 +36,7 @@ const styles = {
     margin: 0,
   },
   infoWrapper: {
+    width: 288,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
