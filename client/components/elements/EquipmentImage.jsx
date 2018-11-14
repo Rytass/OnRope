@@ -7,6 +7,10 @@ const styles = {
   wrapper: {
     width: 210,
     margin: '0 12px',
+    cursor: 'pointer',
+    ':hover': {
+      opacity: 0.9,
+    },
   },
   image: {
     width: 210,
@@ -26,12 +30,14 @@ const styles = {
 function EquipmentImage({
   image,
   text,
+  index,
 }: {
   image: string,
   text: string,
+  index: number,
 }) {
   return (
-    <div style={styles.wrapper}>
+    <div style={styles.wrapper} onClick={() => console.log(index)}>
       <img src={image} alt="equipment" style={styles.image} />
       <p style={styles.text}>{text}</p>
     </div>

@@ -66,35 +66,45 @@ function EquipmentSection() {
       <div style={styles.imagesWrapper}>
         <EquipmentImage
           text="RESCUE PRO 2.0全身式吊帶"
+          index={0}
           image={equipment1} />
         <EquipmentImage
           text="ASAP LOCK移動防墜器(具上鎖功能)"
+          index={1}
           image={equipment2} />
         <EquipmentImage
           text="EN FORCER後備裝備"
+          index={2}
           image={equipment3} />
         <EquipmentImage
           text="勢能吸收器&可調式腳踏圈(腳帶環)"
+          index={3}
           image={equipment4} />
         <EquipmentImage
           text="手握式上升器"
+          index={4}
           image={equipment5} />
       </div>
       <div style={styles.imagesWrapper}>
         <EquipmentImage
           text="80cm牛尾繩 SKYLOTEC X-TREM DYNAMIK 11mm 動力繩,符合EN892"
+          index={5}
           image={equipment6} />
         <EquipmentImage
           text="OVAL SCREW手動上鎖鉤環"
+          index={6}
           image={equipment7} />
         <EquipmentImage
           text="DOUBLE-O TRI 自動上鎖鉤環"
+          index={7}
           image={equipment8} />
         <EquipmentImage
           text="Lory PRO 堅固強大的多功能下降器，最大下降荷重225公斤。具防恐慌及自動上鎖功能，是您繩索作業最佳利器。"
+          index={8}
           image={equipment9} />
         <EquipmentImage
           text="PRO SLING短掛"
+          index={9}
           image={equipment10} />
       </div>
       <div style={styles.footer}>
