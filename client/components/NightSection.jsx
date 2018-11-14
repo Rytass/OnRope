@@ -18,8 +18,12 @@ const styles = {
   vedioWrapper: {
     width: 600,
     height: 338,
-    backgroundColor: '#fff',
     margin: '0 60px 0 0',
+  },
+  iframe: {
+    border: 0,
+    width: '100%',
+    height: '100%',
   },
   nightInfoWrapper: {
     display: 'flex',
@@ -86,7 +90,11 @@ function NightSection() {
   return (
     <div style={styles.nightSection}>
       <div style={styles.vedioWrapper}>
-        vedio
+        <iframe
+          style={styles.iframe}
+          title="video"
+          frameBorder={0}
+          src="https://www.youtube.com/watch?v=YJfHuATJYsQ&list=RDMMhrdQ_6K6oXk" />
       </div>
       <div style={styles.nightInfoWrapper}>
         <h2 style={styles.title}>TRAA一級繩索技術證照夜間班開課了</h2>

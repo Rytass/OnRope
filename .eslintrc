@@ -22,6 +22,7 @@
     "fetch": true,
     "__DEV__": true,
     "Response": true,
+    "ol": false,
     "ReadableStream": true
   },
   "parser": "babel-eslint",

@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { PureComponent } from 'react';
 
 const styles = {
   wrapper: {
@@ -26,10 +26,9 @@ const styles = {
     color: '#fff',
     margin: 0,
   },
-  mapWrapper: {
+  map: {
     width: '100%',
     height: 567,
-    backgroundColor: '#4a4a4a',
     margin: '56px 0 0 0',
   },
   infoWrapper: {
@@ -85,43 +84,92 @@ const styles = {
   },
 };
 
-function MapSection() {
-  return (
-    <div style={styles.wrapper}>
-      <h2 style={styles.title}>場地位置</h2>
-      <h2 style={styles.subtitle}>新北最亮眼最舒適的繩索訓練中心</h2>
-      <div style={styles.mapWrapper}>
-        map
-      </div>
-      <div style={styles.infoWrapper}>
-        <h2 style={styles.infoTitle}>瀚登小將有限公司</h2>
-        <h2 style={styles.infoSubtitle}>新北市泰山區中央路5巷32-1號</h2>
-        <div style={styles.trafficWrapper}>
-          <div style={styles.trafficBlock}>
-            <p style={styles.trafficTitle}>免費接駁車</p>
-            <p style={styles.trafficContent}>台北車站北三門至 泰山明志國小下車後步行五分鐘可到達</p>
-            <a href="https://www.google.com" style={styles.trafficContent}>
-              <span>接駁車時刻表</span>
-            </a>
-          </div>
-          <div style={styles.trafficBlock}>
-            <p style={styles.trafficTitle}>捷運中和新蘆線</p>
-            <p style={styles.trafficContent}>丹鳳站 出口1 轉乘下列公車至 明志國小站，步行五分鐘可到達</p>
-            <p style={styles.trafficContent}>637 /638/797/801/880/883/1501/1503</p>
-          </div>
-          <div style={styles.trafficBlock}>
-            <p style={styles.trafficTitle}>機場捷運線</p>
-            <p style={styles.trafficContent}>泰山貴和站 轉乘下列公車至 明志國小站，步行五分鐘可到達</p>
-            <p style={styles.trafficContent}>
-              637/638/797/798/801/858/880/883/898/1501/1503/
-              {'\n'}
-              F211
-            </p>
+class MapSection extends PureComponent {
+  static ICON_STYLE = new ol.style.Style({
+    image: new ol.style.Circle({
+      fill: new ol.style.Fill({
+        color: [0, 141, 207],
+      }),
+      radius: 10,
+      stroke: new ol.style.Stroke({
+        width: 3,
+        color: [255, 255, 255],
+      }),
+    }),
+  });
+
+  componentDidMount() {
+    this.renderMap();
+  }
+
+  renderMap() {
+    const localX = 139.753027;
+    const localY = 25.074216;
+    this.markerSource = new ol.source.Vector();
+
+    const vectorLayer = new ol.layer.Vector({
+      source: this.markerSource,
+    });
+
+    this.map = new ol.Map({
+      layers: [
+        new ol.layer.Tile({
+          source: new ol.source.OSM(),
+        }),
+        vectorLayer,
+      ],
+      target: 'map',
+      controls: [],
+      view: new ol.View({
+        center: [localX, localY],
+        zoom: 15,
+        maxZoom: 15,
+        minZoom: 15,
+        projection: 'EPSG:4326',
+      }),
+    });
+
+    const feature = new ol.Feature(new ol.geom.Point([localX, localY]));
+    feature.setStyle(MapSection.ICON_STYLE);
+    this.markerSource.addFeature(feature);
+  }
+
+  render() {
+    return (
+      <div style={styles.wrapper}>
+        <h2 style={styles.title}>場地位置</h2>
+        <h2 style={styles.subtitle}>新北最亮眼最舒適的繩索訓練中心</h2>
+        <div style={styles.map} id="map" />
+        <div style={styles.infoWrapper}>
+          <h2 style={styles.infoTitle}>瀚登小將有限公司</h2>
+          <h2 style={styles.infoSubtitle}>新北市泰山區中央路5巷32-1號</h2>
+          <div style={styles.trafficWrapper}>
+            <div style={styles.trafficBlock}>
+              <p style={styles.trafficTitle}>免費接駁車</p>
+              <p style={styles.trafficContent}>台北車站北三門至 泰山明志國小下車後步行五分鐘可到達</p>
+              <a href="https://www.google.com" style={styles.trafficContent}>
+                <span>接駁車時刻表</span>
+              </a>
+            </div>
+            <div style={styles.trafficBlock}>
+              <p style={styles.trafficTitle}>捷運中和新蘆線</p>
+              <p style={styles.trafficContent}>丹鳳站 出口1 轉乘下列公車至 明志國小站，步行五分鐘可到達</p>
+              <p style={styles.trafficContent}>637 /638/797/801/880/883/1501/1503</p>
+            </div>
+            <div style={styles.trafficBlock}>
+              <p style={styles.trafficTitle}>機場捷運線</p>
+              <p style={styles.trafficContent}>泰山貴和站 轉乘下列公車至 明志國小站，步行五分鐘可到達</p>
+              <p style={styles.trafficContent}>
+                637/638/797/798/801/858/880/883/898/1501/1503/
+                {'\n'}
+                F211
+              </p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
 }
 
 export default MapSection;

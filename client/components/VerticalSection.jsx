@@ -59,8 +59,12 @@ const styles = {
   vedioWrapper: {
     width: 600,
     height: 338,
-    backgroundColor: '#fff',
     margin: '0 60px 0 0',
+  },
+  iframe: {
+    border: 0,
+    width: '100%',
+    height: '100%',
   },
   introInfoWrapper: {
     width: 600,
@@ -133,7 +137,11 @@ function VerticalSection() {
       </div>
       <div style={styles.introductionSection}>
         <div style={styles.vedioWrapper}>
-          vedio
+          <iframe
+            style={styles.iframe}
+            title="video"
+            frameBorder={0}
+            src="https://www.youtube.com/watch?v=YJfHuATJYsQ&list=RDMMhrdQ_6K6oXk" />
         </div>
         <div style={styles.introInfoWrapper}>
           <h2 style={styles.introInfoTitle}>本中心是目前台灣唯一擁有專門垂直舞蹈的教室，最專業的空間，最安全的環境</h2>
