@@ -3,15 +3,15 @@
 import React from 'react';
 import EquipmentImage from './elements/EquipmentImage.jsx';
 import EquipmentModal from '../containers/EquipmentModal.jsx';
-import equipment1 from '../static/images/equipment-01.png';
-import equipment2 from '../static/images/equipment-02.png';
-import equipment3 from '../static/images/equipment-03.png';
-import equipment4 from '../static/images/equipment-04.png';
-import equipment5 from '../static/images/equipment-05.png';
-import equipment6 from '../static/images/equipment-06.png';
-import equipment7 from '../static/images/equipment-07.png';
-import equipment8 from '../static/images/equipment-08.png';
-import equipment9 from '../static/images/equipment-09.png';
+import equipment1 from '../static/images/equipment-01-1.jpg';
+import equipment2 from '../static/images/equipment-02.jpg';
+import equipment3 from '../static/images/equipment-03-1.jpg';
+import equipment4 from '../static/images/equipment-04.jpg';
+import equipment5 from '../static/images/equipment-05-1.jpg';
+import equipment6 from '../static/images/equipment-06.jpg';
+import equipment7 from '../static/images/equipment-07.jpg';
+import equipment8 from '../static/images/equipment-08.jpg';
+import equipment9 from '../static/images/equipment-09.jpg';
 import equipment10 from '../static/images/equipment-10.png';
 
 const styles = {
@@ -71,41 +71,41 @@ function EquipmentSection() {
           image={equipment1} />
         <EquipmentImage
           text="ASAP LOCK移動防墜器(具上鎖功能)"
-          index={1}
+          index={4}
           image={equipment2} />
         <EquipmentImage
           text="EN FORCER後備裝備"
-          index={2}
+          index={5}
           image={equipment3} />
         <EquipmentImage
           text="勢能吸收器&可調式腳踏圈(腳帶環)"
-          index={3}
+          index={7}
           image={equipment4} />
         <EquipmentImage
           text="手握式上升器"
-          index={4}
+          index={8}
           image={equipment5} />
       </div>
       <div style={styles.imagesWrapper}>
         <EquipmentImage
           text="80cm牛尾繩 SKYLOTEC X-TREM DYNAMIK 11mm 動力繩,符合EN892"
-          index={5}
+          index={10}
           image={equipment6} />
         <EquipmentImage
           text="OVAL SCREW手動上鎖鉤環"
-          index={6}
+          index={11}
           image={equipment7} />
         <EquipmentImage
           text="DOUBLE-O TRI 自動上鎖鉤環"
-          index={7}
+          index={12}
           image={equipment8} />
         <EquipmentImage
           text="Lory PRO 堅固強大的多功能下降器，最大下降荷重225公斤。具防恐慌及自動上鎖功能，是您繩索作業最佳利器。"
-          index={8}
+          index={13}
           image={equipment9} />
         <EquipmentImage
           text="PRO SLING短掛"
-          index={9}
+          index={14}
           image={equipment10} />
       </div>
       <div style={styles.footer}>

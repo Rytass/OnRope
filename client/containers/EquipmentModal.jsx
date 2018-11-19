@@ -5,15 +5,20 @@ import radium from 'radium';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { closeEquipModal } from '../actions/Equipment.js';
-import equipment1 from '../static/images/equipment-01.png';
-import equipment2 from '../static/images/equipment-02.png';
-import equipment3 from '../static/images/equipment-03.png';
-import equipment4 from '../static/images/equipment-04.png';
-import equipment5 from '../static/images/equipment-05.png';
-import equipment6 from '../static/images/equipment-06.png';
-import equipment7 from '../static/images/equipment-07.png';
-import equipment8 from '../static/images/equipment-08.png';
-import equipment9 from '../static/images/equipment-09.png';
+import equipment1_1 from '../static/images/equipment-01-1.jpg';
+import equipment1_2 from '../static/images/equipment-01-2.jpg';
+import equipment1_3 from '../static/images/equipment-01-3.jpg';
+import equipment1_4 from '../static/images/equipment-01-4.jpg';
+import equipment2 from '../static/images/equipment-02.jpg';
+import equipment3_1 from '../static/images/equipment-03-1.jpg';
+import equipment3_2 from '../static/images/equipment-03-2.jpg';
+import equipment4 from '../static/images/equipment-04.jpg';
+import equipment5_1 from '../static/images/equipment-05-1.jpg';
+import equipment5_2 from '../static/images/equipment-05-2.jpg';
+import equipment6 from '../static/images/equipment-06.jpg';
+import equipment7 from '../static/images/equipment-07.jpg';
+import equipment8 from '../static/images/equipment-08.jpg';
+import equipment9 from '../static/images/equipment-09.jpg';
 import equipment10 from '../static/images/equipment-10.png';
 import cancelIcon from '../static/images/icon-24-cancel.png';
 import leftIcon from '../static/images/icon-48-arrow-left-bk.png';
@@ -89,11 +94,16 @@ const styles = {
 
 class EquipmentModal extends PureComponent<Props> {
   static EQUIPMENTS = [
-    equipment1,
+    equipment1_1,
+    equipment1_2,
+    equipment1_3,
+    equipment1_4,
     equipment2,
-    equipment3,
+    equipment3_1,
+    equipment3_2,
     equipment4,
-    equipment5,
+    equipment5_1,
+    equipment5_2,
     equipment6,
     equipment7,
     equipment8,
@@ -144,7 +154,7 @@ class EquipmentModal extends PureComponent<Props> {
       currentIndex,
     } = this.state;
 
-    if (currentIndex !== 9) {
+    if (currentIndex !== 14) {
       this.setState({ currentIndex: currentIndex + 1 });
     }
   }
