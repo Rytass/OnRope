@@ -13,6 +13,7 @@ import EventSection from '../components/EventSection.jsx';
 import ConnectionSection from '../components/ConnectionSection.jsx';
 import MapSection from '../components/MapSection.jsx';
 import Footer from '../components/Footer.jsx';
+import NaviLinkWrapper from './NaviLinkWrapper.jsx';
 
 const styles = {
   wrapper: {
@@ -44,6 +45,7 @@ class MainPage extends PureComponent<Props> {
         <ConnectionSection />
         <MapSection />
         <Footer />
+        <NaviLinkWrapper />
       </div>
     );
   }
