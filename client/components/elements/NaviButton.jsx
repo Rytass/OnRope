@@ -42,11 +42,12 @@ class NaviButton extends PureComponent<Props> {
   render() {
     const {
       text,
+      targetHeight,
       isActived,
     } = this.props;
 
     return (
-      <div style={styles.itemWrapper}>
+      <div style={styles.itemWrapper} onClick={() => window.scrollTo(0, targetHeight)}>
         <p style={[
           styles.itemDefault,
           isActived && styles.itemActived,
