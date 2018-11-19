@@ -2,6 +2,9 @@
 
 import React from 'react';
 import radium from 'radium';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { showEquipModal } from '../../actions/Equipment.js';
 
 const styles = {
   wrapper: {
@@ -31,17 +34,28 @@ function EquipmentImage({
   image,
   text,
   index,
+  setIndex,
 }: {
   image: string,
   text: string,
   index: number,
+  setIndex: Function,
 }) {
   return (
-    <div style={styles.wrapper} onClick={() => console.log(index)}>
+    <div style={styles.wrapper} onClick={() => setIndex(index)}>
       <img src={image} alt="equipment" style={styles.image} />
       <p style={styles.text}>{text}</p>
     </div>
   );
 }
 
-export default radium(EquipmentImage);
+const reduxHook = connect(
+  () => ({
+
+  }),
+  dispatch => bindActionCreators({
+    setIndex: index => showEquipModal(index),
+  }, dispatch)
+);
+
+export default reduxHook(radium(EquipmentImage));

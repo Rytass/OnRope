@@ -2,6 +2,7 @@
 
 import React from 'react';
 import EquipmentImage from './elements/EquipmentImage.jsx';
+import EquipmentModal from '../containers/EquipmentModal.jsx';
 import equipment1 from '../static/images/equipment-01.png';
 import equipment2 from '../static/images/equipment-02.png';
 import equipment3 from '../static/images/equipment-03.png';
@@ -111,6 +112,7 @@ function EquipmentSection() {
         <span style={styles.footerText}>以上商品瀚登皆有代購</span>
         <span style={styles.footerText}>上課詢問/電話詢問02-2902-0376</span>
       </div>
+      <EquipmentModal />
     </div>
   );
 }
