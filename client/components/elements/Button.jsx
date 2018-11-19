@@ -10,6 +10,15 @@ const styles = {
     borderRadius: 4,
     backgroundColor: '#4bb3d0',
   },
+  button: {
+    width: 320,
+    height: 48,
+    borderRadius: 4,
+    backgroundColor: '#4bb3d0',
+    cursor: 'pointer',
+    border: 0,
+    outline: 0,
+  },
   highter: {
     height: 58,
   },
@@ -40,12 +49,31 @@ function Button({
   text,
   isHigher,
   isThin,
+  onClick,
 }: {
   url: string,
   text: string,
   isHigher: boolean,
   isThin: boolean,
+  onClick: boolean,
 }) {
+  if (onClick) {
+    return (
+      <button
+        onClick={onClick}
+        type="button"
+        style={[
+          styles.button,
+          isHigher && styles.highter,
+          isThin && styles.thin,
+        ]}>
+        <div style={styles.buttonWrapper}>
+          <span style={styles.text}>{text}</span>
+        </div>
+      </button>
+    );
+  }
+
   return (
     <div style={[
       styles.wrapper,

@@ -50,7 +50,10 @@ function ConnectionSection() {
           <p style={styles.text}>裝備一起ＧＯ</p>
           <p style={styles.text}>繩索技術教學客製專案</p>
         </div>
-        <Button text="與我聯繫" url="ohmyrope@gmail.com" isHigher />
+        <Button
+          text="與我聯繫"
+          onClick={() => window.open('mailto:ohmyrope@gmail.com')}
+          isHigher />
       </div>
       <img src={connection2} alt="connection" style={styles.image} />
     </div>

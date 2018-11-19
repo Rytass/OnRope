@@ -140,14 +140,14 @@ function Footer() {
         <span style={styles.linkTitle}>社群連結</span>
         <div>
           <a
-            href="https://www.google.com"
+            href="https://www.facebook.com/Oh-My-Rope瀚登小將繩索訓練中心-2082857378646335/"
             style={styles.fbLink}
             target="_blank"
             rel="noopener noreferrer">
             <img src={fbIcon} alt="facebook-icon" style={styles.icon} />
           </a>
           <a
-            href="https://www.google.com"
+            href="line://home/public/main?id=dhd6008w"
             target="_blank"
             rel="noopener noreferrer">
             <img src={atIcon} alt="at-icon" style={styles.icon} />

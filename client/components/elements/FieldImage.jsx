@@ -1,6 +1,6 @@
 // @flow
 
-import React from 'react';
+import React, { PureComponent } from 'react';
 import radium from 'radium';
 
 const styles = {
@@ -27,6 +27,7 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     position: 'relative',
+    pointerEvents: 'none',
   },
   title: {
     fontSize: 28,
@@ -53,43 +54,66 @@ const styles = {
     height: '100%',
     backgroundColor: 'rgba(0, 0, 0, 0.6)',
     position: 'absolute',
+    pointerEvents: 'none',
     top: 0,
     rigth: 0,
     zIndex: 9,
   },
 };
 
-function TextImage({
-  title,
-  image,
-  content,
-  isBig,
-}: {
+type Props = {
   title: string,
   image: string,
   content: string,
   isBig: boolean,
-}) {
-  return (
-    <div
-      style={[
-        styles.wrapper,
-        { backgroundImage: `url(${image})` },
-        isBig && styles.bigPadding,
-      ]}>
-      <div style={styles.blackBackground} />
-      <div style={styles.textWrapper}>
-        <p style={styles.title}>{title}</p>
-        <p
-          style={[
-            styles.content,
-            !isBig && styles.absoluteContent,
-          ]}>
-          {content}
-        </p>
-      </div>
-    </div>
-  );
 }
 
-export default radium(TextImage);
+class FieldImage extends PureComponent<Props> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isHovered: false,
+    };
+  }
+
+  render() {
+    const {
+      title,
+      image,
+      content,
+      isBig,
+    } = this.props;
+
+    const {
+      isHovered,
+    } = this.state;
+
+    return (
+      <div
+        onMouseOver={() => this.setState({ isHovered: true })}
+        onMouseOut={() => this.setState({ isHovered: false })}
+        style={[
+          styles.wrapper,
+          { backgroundImage: `url(${image})` },
+          isBig && styles.bigPadding,
+        ]}>
+        {isHovered ? <div style={styles.blackBackground} /> : null}
+        <div style={styles.textWrapper}>
+          <p style={styles.title}>{title}</p>
+          {isHovered ? (
+            <p
+              style={[
+                styles.content,
+                !isBig && styles.absoluteContent,
+              ]}>
+              {content}
+            </p>
+          ) : null}
+        </div>
+      </div>
+    );
+  }
+}
+
+export default radium(FieldImage);
