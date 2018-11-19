@@ -143,7 +143,7 @@ function RentSection() {
       <div style={styles.rentBtnWrapper}>
         <div>
           <p style={styles.rentHintText}>如欲租借請預先填單確認數量</p>
-          <Button text="預填租用表單" url="https://www.google.com" />
+          <Button text="預填租用表單" url="http://t.cn/RFx5dRh" />
         </div>
       </div>
       <div style={styles.productWrapper}>
@@ -157,7 +157,7 @@ function RentSection() {
           <p style={styles.productContent}>21~40條➡150元</p>
           <p style={styles.productContent}>40條以上➡200元</p>
           <div style={styles.productBtnWrapper}>
-            <Button text="前往訂購" url="https://www.google.com" isHigher />
+            <Button text="前往訂購" url="http://t.cn/ReQN5sm " isHigher />
           </div>
         </div>
       </div>

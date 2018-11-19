@@ -66,10 +66,18 @@ function EventSection() {
             <p style={styles.eventContentText}>拖拉手呂君豪</p>
             <p style={styles.eventContentText}>模擬傷患許嘉瑤</p>
             <div style={styles.linkWrapper}>
-              <a href="https://www.google.com" style={styles.linkText}>
+              <a
+                href="https://www.setn.com/News.aspx?NewsID=403065"
+                style={styles.linkText}
+                target="_blank"
+                rel="noopener noreferrer">
                 <span>相關報導一</span>
               </a>
-              <a href="https://www.google.com" style={styles.linkText}>
+              <a
+                href="https://www.facebook.com/setnews/videos/1883954705022442/"
+                style={styles.linkText}
+                target="_blank"
+                rel="noopener noreferrer">
                 <span>相關報導二</span>
               </a>
             </div>
@@ -91,7 +99,11 @@ function EventSection() {
             <p style={styles.eventContentText}>在這個演出裡面所有參與的人沒有半個是真的專業領域出身，大家從一開始就是手牽著手一路跌跌撞撞的熬過來，這次在整個演出當中學會尊重每個人的專業是基本認知，但不隨便輕看別人也是一種基本禮貌，</p>
             <p style={styles.eventContentText}>這場活動擔任的是舞監及編舞老師，帶領一群根本不會跳舞還有甚至一開始連繩索也沒摸過的素人們努力下我們終究讓這場垂直表演很成功的發生了!</p>
             <div style={styles.linkWrapper}>
-              <a href="https://www.google.com" style={styles.linkText}>
+              <a
+                href="https://www.youtube.com/watch?v=dmCW1dTQhJ0"
+                style={styles.linkText}
+                target="_blank"
+                rel="noopener noreferrer">
                 <span>相關影片</span>
               </a>
             </div>

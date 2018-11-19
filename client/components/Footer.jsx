@@ -139,10 +139,17 @@ function Footer() {
       <div style={styles.linkBlock}>
         <span style={styles.linkTitle}>社群連結</span>
         <div>
-          <a href="https://www.google.com" style={styles.fbLink}>
+          <a
+            href="https://www.google.com"
+            style={styles.fbLink}
+            target="_blank"
+            rel="noopener noreferrer">
             <img src={fbIcon} alt="facebook-icon" style={styles.icon} />
           </a>
-          <a href="https://www.google.com">
+          <a
+            href="https://www.google.com"
+            target="_blank"
+            rel="noopener noreferrer">
             <img src={atIcon} alt="at-icon" style={styles.icon} />
           </a>
         </div>

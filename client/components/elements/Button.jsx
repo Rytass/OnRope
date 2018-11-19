@@ -55,6 +55,7 @@ function Button({
       <a
         style={styles.link}
         href={url}
+        target="_blank"
         rel="noopener noreferrer">
         <div style={styles.buttonWrapper}>
           <span style={styles.text}>{text}</span>

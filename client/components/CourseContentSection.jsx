@@ -152,7 +152,7 @@ function CourseContentSection() {
             <div style={styles.priceWrapper}>
               <p style={styles.infoText}>NT$3,500元</p>
             </div>
-            <Button text="立即報名" url="https://www.google.com" isThin />
+            <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>
@@ -177,7 +177,7 @@ function CourseContentSection() {
             <div style={styles.priceWrapper}>
               <p style={styles.infoText}>NT$12,000元</p>
             </div>
-            <Button text="立即報名" url="https://www.google.com" isThin />
+            <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>
@@ -207,7 +207,7 @@ function CourseContentSection() {
             <div style={styles.priceWrapper}>
               <p style={styles.infoText}>NT$3,000元</p>
             </div>
-            <Button text="立即報名" url="https://www.google.com" isThin />
+            <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>

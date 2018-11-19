@@ -94,7 +94,7 @@ function NightSection() {
           style={styles.iframe}
           title="video"
           frameBorder={0}
-          src="https://www.youtube.com/watch?v=YJfHuATJYsQ&list=RDMMhrdQ_6K6oXk" />
+          src="https://youtu.be/cGmmHX9dRmU" />
       </div>
       <div style={styles.nightInfoWrapper}>
         <h2 style={styles.title}>TRAA一級繩索技術證照夜間班開課了</h2>
@@ -105,7 +105,7 @@ function NightSection() {
             <p style={styles.infoText}>NT$9,000元</p>
             <p style={styles.infoText}>7堂 / 共計28小時</p>
           </div>
-          <Button text="立即報名" url="https://www.google.com" isThin />
+          <Button text="立即報名" url="https://reurl.cc/pmRx8" isThin />
         </div>
       </div>
       <div style={styles.image} />

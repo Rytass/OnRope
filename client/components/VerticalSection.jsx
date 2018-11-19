@@ -141,7 +141,7 @@ function VerticalSection() {
             style={styles.iframe}
             title="video"
             frameBorder={0}
-            src="https://www.youtube.com/watch?v=CqCAcZu0R1c" />
+            src="https://youtu.be/CqCAcZu0R1c" />
         </div>
         <div style={styles.introInfoWrapper}>
           <h2 style={styles.introInfoTitle}>本中心是目前台灣唯一擁有專門垂直舞蹈的教室，最專業的空間，最安全的環境</h2>
@@ -157,7 +157,7 @@ function VerticalSection() {
               <p style={styles.infoText}>NT$18,000元</p>
               <p style={styles.infoText}>4週 / 共計16小時</p>
             </div>
-            <Button text="立即報名" url="https://www.google.com" isThin />
+            <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>

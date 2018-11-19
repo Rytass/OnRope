@@ -147,7 +147,11 @@ class MapSection extends PureComponent {
             <div style={styles.trafficBlock}>
               <p style={styles.trafficTitle}>免費接駁車</p>
               <p style={styles.trafficContent}>台北車站北三門至 泰山明志國小下車後步行五分鐘可到達</p>
-              <a href="https://www.google.com" style={styles.trafficContent}>
+              <a
+                href="https://www.taishan.ntpc.gov.tw/archive/file/明志線F216.png"
+                style={styles.trafficContent}
+                target="_blank"
+                rel="noopener noreferrer">
                 <span>接駁車時刻表</span>
               </a>
             </div>

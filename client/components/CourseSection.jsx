@@ -137,7 +137,7 @@ function CourseSection() {
                 (不包含證照費)
               </p>
             </div>
-            <Button text="個人報名" url="https://www.google.com" isThin />
+            <Button text="個人報名" url="http://t.cn/RFIgZmd " isThin />
           </div>
           <div>
             <div style={styles.priceInfoWrapper}>
@@ -145,7 +145,7 @@ function CourseSection() {
               <p style={styles.discountText}>(五人同行打7折)</p>
               <p style={styles.discountText}>(十人同行6.5折)</p>
             </div>
-            <Button text="團體報名" url="https://www.google.com" isThin />
+            <Button text="團體報名" url="https://reurl.cc/pmRx8" isThin />
           </div>
         </div>
       </div>
