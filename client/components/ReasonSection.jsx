@@ -10,6 +10,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     padding: '76px 0',
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      padding: '48px 0',
+    },
     '@media (max-width: 479px)': {
       padding: '48px 0',
     },
@@ -20,6 +23,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      width: 400,
+    },
     '@media (max-width: 479px)': {
       width: 327,
     },

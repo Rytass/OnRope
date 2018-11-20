@@ -99,7 +99,7 @@ class MapSection extends PureComponent {
   });
 
   componentDidMount() {
-    this.renderMap();
+    // this.renderMap();
   }
 
   renderMap() {

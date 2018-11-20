@@ -21,7 +21,7 @@ const styles = {
     letterSpacing: 1.3,
     color: '#fff',
     zIndex: 10,
-    '@media (max-width: 1023px) and (min-width: 480px)': {
+    '@media (max-width: 1023px)': {
       fontSize: 24,
       letterSpacing: 1,
     },

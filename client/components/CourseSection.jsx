@@ -32,11 +32,22 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+    },
   },
   image: {
     height: 347,
     '@media (max-width: 1023px) and (min-width: 480px)': {
       height: 185,
+    },
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      width: '100%',
+      height: 300,
+    },
+    '@media (max-width: 479px)': {
+      width: '100%',
+      height: 275,
     },
   },
   infoWrapper: {
@@ -46,6 +57,14 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: '66px 0 56px 0',
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      padding: '20px 0 56px 0',
+      width: 420,
+    },
+    '@media (max-width: 479px)': {
+      padding: '20px 0 56px 0',
+      width: 327,
+    },
   },
   infoTitle: {
     fontSize: 24,
@@ -54,6 +73,14 @@ const styles = {
     letterSpacing: 2,
     color: 'rgba(255, 255, 255, 0.92)',
     margin: '0 0 16px 0',
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      fontSize: 20,
+      margin: '0 0 8px 0',
+    },
+    '@media (max-width: 479px)': {
+      fontSize: 20,
+      margin: '0 0 8px 0',
+    },
   },
   infoContent: {
     fontSize: 16,
@@ -74,6 +101,24 @@ const styles = {
     padding: '32px 0 0 0',
     '@media (max-width: 1023px) and (min-width: 480px)': {
       padding: '32px 32px 0 32px',
+    },
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: 0,
+    },
+    '@media (max-width: 479px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: 0,
+    },
+  },
+  infoBlock: {
+    '@media (max-width: 767px) and (min-width: 480px)': {
+      margin: '24px 0 0 0',
+    },
+    '@media (max-width: 479px)': {
+      margin: '24px 0 0 0',
     },
   },
   priceInfoWrapper: {
@@ -145,7 +190,7 @@ function CourseSection() {
             </div>
             <Button text="個人報名" url="http://t.cn/RFIgZmd " isThin />
           </div>
-          <div>
+          <div style={styles.infoBlock}>
             <div style={styles.priceInfoWrapper}>
               <p style={styles.discountText}>(三人同行打8折)</p>
               <p style={styles.discountText}>(五人同行打7折)</p>
