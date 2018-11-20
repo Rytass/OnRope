@@ -24,6 +24,13 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
   },
+  sectionWrapper: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'flex-start',
+    justifyContent: 'flex-start',
+  },
 };
 
 type Props = {
@@ -34,14 +41,20 @@ class MainPage extends PureComponent<Props> {
   render() {
     return (
       <div style={styles.wrapper}>
-        <Header />
-        <SlideShow />
+        <div id="header" style={styles.sectionWrapper}>
+          <Header />
+          <SlideShow />
+        </div>
         <ReasonSection />
         <CourseSection />
-        <VerticalSection />
+        <div id="vertical" style={styles.sectionWrapper}>
+          <VerticalSection />
+        </div>
         <FieldSection />
-        <EquipmentSection />
-        <RentSection />
+        <div id="equip" style={styles.sectionWrapper}>
+          <EquipmentSection />
+          <RentSection />
+        </div>
         <CoachSection />
         <EventSection />
         <ConnectionSection />

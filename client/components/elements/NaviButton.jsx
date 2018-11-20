@@ -39,6 +39,35 @@ const styles = {
 };
 
 class NaviButton extends PureComponent<Props> {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      isActived: props.elementId === 'header' && props.scrollY === 0,
+    };
+  }
+
+  componentDidUpdate(prevProps) {
+    const {
+      scrollY,
+      elementId,
+    } = this.props;
+
+    if (prevProps.scrollY !== scrollY) {
+      const element = document.getElementById(elementId);
+      if (element) {
+        const targetTop = element.offsetTop;
+        const targetHeight = element.offsetHeight;
+
+        if (scrollY >= targetTop && scrollY < (targetHeight + targetTop)) {
+          this.setState({ isActived: true });
+        } else {
+          this.setState({ isActived: false });
+        }
+      }
+    }
+  }
+
   scroll() {
     const {
       elementId,
@@ -53,8 +82,11 @@ class NaviButton extends PureComponent<Props> {
   render() {
     const {
       text,
-      isActived,
     } = this.props;
+
+    const {
+      isActived,
+    } = this.state;
 
     return (
       <div style={styles.itemWrapper} onClick={() => this.scroll()}>

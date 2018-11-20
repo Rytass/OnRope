@@ -39,43 +39,43 @@ class NaviLinkWrapper extends PureComponent {
         <NaviButton
           text="首頁"
           elementId="header"
-          isActived={scrollY >= 0 && scrollY < 600} />
+          scrollY={scrollY} />
         <NaviButton
           text="創立緣由"
           elementId="reason"
-          isActived={scrollY >= 600 && scrollY < 1040} />
+          scrollY={scrollY} />
         <NaviButton
           text="課程介紹"
           elementId="course"
-          isActived={scrollY >= 1040 && scrollY < 4390} />
+          scrollY={scrollY} />
         <NaviButton
           text="繩索垂直舞蹈"
           elementId="vertical"
-          isActived={scrollY >= 4390 && scrollY < 5980} />
+          scrollY={scrollY} />
         <NaviButton
           text="場地介紹"
           elementId="field"
-          isActived={scrollY >= 5980 && scrollY < 7353} />
+          scrollY={scrollY} />
         <NaviButton
           text="裝備介紹&代購商品"
           elementId="equip"
-          isActived={scrollY >= 7353 && scrollY < 9809} />
+          scrollY={scrollY} />
         <NaviButton
           text="教練介紹"
           elementId="coach"
-          isActived={scrollY >= 9809 && scrollY < 11737} />
+          scrollY={scrollY} />
         <NaviButton
           text="事件回顧"
           elementId="event"
-          isActived={scrollY >= 11737 && scrollY < 13221} />
+          scrollY={scrollY} />
         <NaviButton
           text="到府教學"
           elementId="connection"
-          isActived={scrollY >= 13221 && scrollY < 13590} />
+          scrollY={scrollY} />
         <NaviButton
           text="場地位置"
           elementId="place"
-          isActived={scrollY >= 13590} />
+          scrollY={scrollY} />
       </div>
     );
   }

@@ -61,7 +61,7 @@ const styles = {
 
 function EquipmentSection() {
   return (
-    <div id="equip" style={styles.wrapper}>
+    <div style={styles.wrapper}>
       <h2 style={styles.title}>裝備介紹&代購商品</h2>
       <h3 style={styles.subtitle}>工業繩索裝備</h3>
       <div style={styles.imagesWrapper}>

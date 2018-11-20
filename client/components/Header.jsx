@@ -97,7 +97,7 @@ const styles = {
 
 function Header() {
   return (
-    <header id="header" style={styles.wrapper}>
+    <header style={styles.wrapper}>
       <div style={styles.logoText} />
       <div style={styles.logoWrapper}>
         <div style={styles.logoOpacityWrapper}>
