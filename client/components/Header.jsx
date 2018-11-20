@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 import logoText from '../static/images/header-logo-a.png';
 import logoEng from '../static/images/header-logo-c.png';
 import logo from '../static/images/header-logo-b.png';
@@ -16,12 +17,20 @@ const styles = {
     padding: '0 32px',
     backgroundColor: '#343534',
     zIndex: 10,
+    '@media (max-width: 479px)': {
+      padding: '0 12px',
+    },
   },
   logoText: {
     width: 111,
     height: 40,
     backgroundImage: `url(${logoText})`,
     backgroundSize: '111px 40px',
+    '@media (max-width: 479px)': {
+      width: 86,
+      height: 30,
+      backgroundSize: '86px 30px',
+    },
   },
   logoWrapper: {
     display: 'flex',
@@ -69,12 +78,20 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-end',
     alignItems: 'center',
+    '@media (max-width: 479px)': {
+      width: 86,
+    },
   },
   logoEng: {
     width: 79,
     height: 32,
     backgroundImage: `url(${logoEng})`,
     backgroundSize: '79px 32px',
+    '@media (max-width: 479px)': {
+      width: 59,
+      height: 24,
+      backgroundSize: '59px 24px',
+    },
   },
 };
 
@@ -97,4 +114,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default radium(Header);
