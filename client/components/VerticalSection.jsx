@@ -1,6 +1,7 @@
 // @flow
 
 import React, { Fragment } from 'react';
+import radium from 'radium';
 import Button from './elements/Button.jsx';
 import classPhoto from '../static/images/class-photo-07.png';
 
@@ -13,6 +14,9 @@ const styles = {
     alignItems: 'center',
     backgroundColor: '#2d2d2d',
     padding: '100px 0 52px 0',
+    '@media (max-width: 1023px)': {
+      padding: '0 0 40px 0',
+    },
   },
   imageBackground: {
     width: 920,
@@ -24,12 +28,26 @@ const styles = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     backgroundImage: `url(${classPhoto})`,
+    '@media (max-width: 1023px)': {
+      width: '100%',
+      height: 417,
+    },
+    '@media (max-width: 767px)': {
+      height: 300,
+    },
+    '@media (max-width: 479px)': {
+      height: 203,
+    },
   },
   title: {
     fontSize: 48,
     fontWeight: 600,
     letterSpacing: 6.7,
     color: '#fff',
+    '@media (max-width: 767px)': {
+      fontSize: 36,
+      letterSpacing: 5,
+    },
   },
   textWrapper: {
     width: 920,
@@ -38,6 +56,13 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     margin: '48px 0 0 0',
+    '@media (max-width: 1023px)': {
+      margin: '40px 0 0 0',
+      width: 600,
+    },
+    '@media (max-width: 767px)': {
+      width: 327,
+    },
   },
   text: {
     fontSize: 16,
@@ -46,6 +71,9 @@ const styles = {
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: 0,
+    '@media (max-width: 1023px)': {
+      textAlign: 'center',
+    },
   },
   introductionSection: {
     width: '100%',
@@ -55,11 +83,31 @@ const styles = {
     alignItems: 'flex-start',
     backgroundColor: '#273539',
     padding: '64px 0',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      padding: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      padding: '0 0 48px 0',
+    },
   },
   vedioWrapper: {
     width: 600,
     height: 338,
     margin: '0 60px 0 0',
+    '@media (max-width: 1300px)': {
+      width: '100%',
+      height: 433,
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      height: 317,
+    },
+    '@media (max-width: 479px)': {
+      height: 211,
+    },
   },
   iframe: {
     border: 0,
@@ -73,6 +121,13 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    '@media (max-width: 1300px)': {
+      margin: '0 auto',
+      alignItems: 'center',
+    },
+    '@media (max-width: 767px)': {
+      width: 327,
+    },
   },
   introInfoTitle: {
     fontSize: 24,
@@ -81,6 +136,13 @@ const styles = {
     letterSpacing: 2,
     color: 'rgba(255, 255, 255, 0.92)',
     margin: '0 0 10px 0',
+    '@media (max-width: 1300px)': {
+      fontSize: 28,
+    },
+    '@media (max-width: 767px)': {
+      fontSize: 20,
+      letterSpacing: 1.4,
+    },
   },
   content: {
     fontSize: 16,
@@ -89,6 +151,13 @@ const styles = {
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: '0 0 32px 0',
+    '@media (max-width: 1300px)': {
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+      letterSpacing: 0.7,
+    },
   },
   infoWrapper: {
     flex: 1,
@@ -165,4 +234,4 @@ function VerticalSection() {
   );
 }
 
-export default VerticalSection;
+export default radium(VerticalSection);
