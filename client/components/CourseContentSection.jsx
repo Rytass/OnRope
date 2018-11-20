@@ -24,6 +24,13 @@ const styles = {
     alignItems: 'flex-start',
     padding: '48px 0',
   },
+  courseBigItem: {
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    padding: '48px 0',
+  },
   border: {
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
@@ -40,13 +47,18 @@ const styles = {
     margin: '0 0 32px 0',
   },
   imageInfoWrapper: {
-    width: 600,
     display: 'flex',
-    alignSelf: 'stretch',
-    flexDirection: 'column',
+    flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     margin: '0 60px 0 0',
+  },
+  InfoBigWrapper: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-end',
   },
   introInfoWrapper: {
     width: 600,
@@ -55,6 +67,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+  },
+  introInfoPadding: {
+    padding: '0 0 0 60px',
   },
   introInfoTitle: {
     fontSize: 24,
@@ -118,41 +133,47 @@ const styles = {
 function CourseContentSection() {
   return (
     <div style={styles.introductionSection}>
-      <div style={styles.courseItem}>
+      <div style={styles.courseBigItem}>
         <div style={styles.imageInfoWrapper}>
           <img style={[styles.image, styles.imageMarginBottom]} src={classPhoto4} alt="class" />
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程天數：</span>
-            1天 (09:00~17:00)
-          </p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>參加者資格：</span>
-            滿十八歲身體健康，無其他資格限制。
-          </p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程內容包含：</span>
-          </p>
-          <p style={styles.content}>個人保護裝備</p>
-          <p style={styles.content}>開收繩索</p>
-          <p style={styles.content}>基本繩結</p>
-          <p style={styles.content}>墜落摯停裝備</p>
-          <p style={styles.content}>沿繩上攀與下降</p>
-          <p style={styles.content}>掛接拯救一名受困在空中的傷患</p>
+          <div style={[styles.introInfoWrapper, styles.introInfoPadding]}>
+            <h2 style={styles.introInfoTitle}>高空繩索入門課程</h2>
+            <p style={styles.smallContent}>嚴肅，緊繃，高壓，體力不堪負荷，崩潰！</p>
+            <p style={styles.smallContent}>你對於繩索訓練的既定印象還是這樣的嗎？</p>
+            <p style={styles.smallContent}>讓我們的高空繩索入門課程顛覆您對訓練的想像！</p>
+            <p style={styles.smallContent}>有別於傳統的教學方式，輕鬆帶領各式各樣的夥伴體驗專業高空繩索，歡迎來自各個領域的您一同加入!!</p>
+            <p style={styles.smallContent}>不管你對於這個訓練的需求是什麼，也許你需要靠這個技能謀生賺錢，也許你有消防或是救難背景所以需要學習這個技術，也許你準備要考正式的繩索工作證照想先來試試水溫，也許你根本不知道繩索技術是什麼，你只是好奇，也許你就單純是個很愛運動的人想來一起爬而已，也許妳的老公/男朋友是相關行業的，妳想來體驗，不管來自哪裡或是為了什麼或是沒有為什麼，</p>
+            <p style={styles.smallContent}>相信一起流汗的這一天都會成為一個很棒的故事。</p>
+          </div>
         </div>
-        <div style={styles.introInfoWrapper}>
-          <h2 style={styles.introInfoTitle}>高空繩索入門課程</h2>
-          <p style={styles.smallContent}>嚴肅，緊繃，高壓，體力不堪負荷，崩潰！</p>
-          <p style={styles.smallContent}>你對於繩索訓練的既定印象還是這樣的嗎？</p>
-          <p style={styles.smallContent}>讓我們的高空繩索入門課程顛覆您對訓練的想像！</p>
-          <p style={styles.smallContent}>有別於傳統的教學方式，輕鬆帶領各式各樣的夥伴體驗專業高空繩索，歡迎來自各個領域的您一同加入!!</p>
-          <p style={styles.smallContent}>不管你對於這個訓練的需求是什麼，也許你需要靠這個技能謀生賺錢，也許你有消防或是救難背景所以需要學習這個技術，也許你準備要考正式的繩索工作證照想先來試試水溫，也許你根本不知道繩索技術是什麼，你只是好奇，也許你就單純是個很愛運動的人想來一起爬而已，也許妳的老公/男朋友是相關行業的，妳想來體驗，不管來自哪裡或是為了什麼或是沒有為什麼，</p>
-          <p style={styles.smallContent}>相信一起流汗的這一天都會成為一個很棒的故事。</p>
-          <div style={styles.infoWrapper}>
-            <p style={styles.infoTitle}>課程收費</p>
-            <div style={styles.priceWrapper}>
-              <p style={styles.infoText}>NT$3,500元</p>
+        <div style={styles.InfoBigWrapper}>
+          <div style={styles.introInfoWrapper}>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程天數：</span>
+              1天 (09:00~17:00)
+            </p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>參加者資格：</span>
+              滿十八歲身體健康，無其他資格限制。
+            </p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程內容包含：</span>
+            </p>
+            <p style={styles.content}>個人保護裝備</p>
+            <p style={styles.content}>開收繩索</p>
+            <p style={styles.content}>基本繩結</p>
+            <p style={styles.content}>墜落摯停裝備</p>
+            <p style={styles.content}>沿繩上攀與下降</p>
+            <p style={styles.content}>掛接拯救一名受困在空中的傷患</p>
+          </div>
+          <div style={styles.introInfoPadding}>
+            <div style={styles.infoWrapper}>
+              <p style={styles.infoTitle}>課程收費</p>
+              <div style={styles.priceWrapper}>
+                <p style={styles.infoText}>NT$3,500元</p>
+              </div>
+              <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
             </div>
-            <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>
