@@ -42,7 +42,7 @@ const styles = {
 
 function ConnectionSection() {
   return (
-    <div style={styles.wrapper}>
+    <div id="connection" style={styles.wrapper}>
       <img src={connection1} alt="connection" style={styles.image} />
       <div style={styles.main}>
         <div style={styles.textWrapper}>

@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 import TextImage from './elements/TextImage.jsx';
 import Button from './elements/Button.jsx';
 import classPhoto1 from '../static/images/class-photo-01.png';
@@ -8,7 +9,6 @@ import classPhoto2 from '../static/images/class-photo-02.png';
 import classPhoto3 from '../static/images/class-photo-03.png';
 import CourseContentSection from './CourseContentSection.jsx';
 import NightSection from './NightSection.jsx';
-import VerticalSection from './VerticalSection.jsx';
 
 const styles = {
   wrapper: {
@@ -35,6 +35,9 @@ const styles = {
   },
   image: {
     height: 347,
+    '@media (max-width: 1023px) and (min-width: 480px)': {
+      height: 185,
+    },
   },
   infoWrapper: {
     width: 600,
@@ -69,6 +72,9 @@ const styles = {
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     padding: '32px 0 0 0',
+    '@media (max-width: 1023px) and (min-width: 480px)': {
+      padding: '32px 32px 0 32px',
+    },
   },
   priceInfoWrapper: {
     margin: '0 0 12px 0',
@@ -105,7 +111,7 @@ const styles = {
 
 function CourseSection() {
   return (
-    <div style={styles.wrapper}>
+    <div id="course" style={styles.wrapper}>
       <h2 style={styles.title}>課程介紹</h2>
       <div style={styles.imagesWrapper}>
         <TextImage
@@ -151,9 +157,8 @@ function CourseSection() {
       </div>
       <CourseContentSection />
       <NightSection />
-      <VerticalSection />
     </div>
   );
 }
 
-export default CourseSection;
+export default radium(CourseSection);

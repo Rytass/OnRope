@@ -48,7 +48,7 @@ const styles = {
 
 function EventSection() {
   return (
-    <div style={styles.wrapper}>
+    <div id="event" style={styles.wrapper}>
       <h2 style={styles.title}>事件回顧</h2>
       <EventItem
         date="2018.6"

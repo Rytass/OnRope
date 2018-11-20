@@ -136,7 +136,7 @@ class MapSection extends PureComponent {
 
   render() {
     return (
-      <div style={styles.wrapper}>
+      <div id="place" style={styles.wrapper}>
         <h2 style={styles.title}>場地位置</h2>
         <h2 style={styles.subtitle}>新北最亮眼最舒適的繩索訓練中心</h2>
         <div style={styles.map} id="map" />

@@ -120,7 +120,7 @@ const styles = {
 function VerticalSection() {
   return (
     <Fragment>
-      <div style={styles.wrapper}>
+      <div id="vertical" style={styles.wrapper}>
         <div style={styles.imageBackground}>
           <p style={styles.title}>繩索垂直舞蹈</p>
         </div>

@@ -117,7 +117,7 @@ const styles = {
 
 function CoachSection() {
   return (
-    <div style={styles.wrapper}>
+    <div id="coach" style={styles.wrapper}>
       <h2 style={styles.title}>教練介紹</h2>
       <div style={styles.sectionWrapper}>
         <div style={styles.main}>

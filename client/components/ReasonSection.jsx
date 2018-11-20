@@ -45,7 +45,7 @@ const styles = {
 
 function ReasonSection() {
   return (
-    <div style={styles.wrapper}>
+    <div id="reason" style={styles.wrapper}>
       <div style={styles.textBlock}>
         <h2 style={styles.title}>創立緣由</h2>
         <p style={styles.text}>一群具有工業繩索證照背景的夥伴們，對繩索技術抱持無比的熱愛。</p>
