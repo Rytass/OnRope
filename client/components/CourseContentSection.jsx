@@ -16,6 +16,12 @@ const styles = {
     alignItems: 'center',
     backgroundColor: '#273539',
     padding: '8px 0',
+    '@media (max-width: 1300px)': {
+      padding: '28px 0',
+    },
+    '@media (max-width: 767px)': {
+      padding: 0,
+    },
   },
   courseItem: {
     display: 'flex',
@@ -23,6 +29,14 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'flex-start',
     padding: '48px 0',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      padding: '28px 0',
+    },
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      padding: '16px 0',
+    },
   },
   courseBigItem: {
     display: 'flex',
@@ -30,21 +44,47 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: '48px 0',
+    '@media (max-width: 1300px)': {
+      padding: '28px 0',
+    },
+    '@media (max-width: 767px)': {
+      padding: '0 0 16px 0',
+    },
   },
   border: {
     borderWidth: '1px 0 0 0',
     borderStyle: 'solid',
     borderColor: '#398297',
+    '@media (max-width: 1300px)': {
+      border: 0,
+    },
   },
   image: {
     width: 600,
-    height: 350,
+    '@media (min-width: 768px)': {
+      height: 350,
+    },
+    '@media (max-width: 767px)': {
+      width: '100%',
+    },
   },
   imageMarginRight: {
     margin: '0 60px 0 0',
+    '@media (max-width: 1300px)': {
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: '0 0 24px 0',
+    },
   },
   imageMarginBottom: {
     margin: '0 0 32px 0',
+    '@media (max-width: 1300px)': {
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: '0 0 24px 0',
+    },
   },
   imageInfoWrapper: {
     display: 'flex',
@@ -52,6 +92,14 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     margin: '0 60px 0 0',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      margin: '0 0 16px 0',
+    },
+    '@media (max-width: 767px)': {
+      alignItems: 'center',
+      margin: '0 0 10px 0',
+    },
   },
   InfoBigWrapper: {
     width: '100%',
@@ -59,6 +107,21 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-end',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+  },
+  InfoSmallWrapper: {
+    width: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
   },
   introInfoWrapper: {
     width: 600,
@@ -67,9 +130,16 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    '@media (max-width: 767px)': {
+      width: 327,
+      margin: '0 auto',
+    },
   },
   introInfoPadding: {
     padding: '0 0 0 60px',
+    '@media (max-width: 1300px)': {
+      padding: 0,
+    },
   },
   introInfoTitle: {
     fontSize: 24,
@@ -78,6 +148,10 @@ const styles = {
     letterSpacing: 2,
     color: 'rgba(255, 255, 255, 0.92)',
     margin: '0 0 10px 0',
+    '@media (max-width: 767px)': {
+      fontSize: 20,
+      letterSpacing: 0.8,
+    },
   },
   smallContent: {
     fontSize: 14,
@@ -109,6 +183,12 @@ const styles = {
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
     margin: '66px 0 0 0',
+    '@media (max-width: 1300px)': {
+      margin: '40px 0 0 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: '24px 0 0 0',
+    },
   },
   infoTitle: {
     fontSize: 16,
@@ -179,20 +259,22 @@ function CourseContentSection() {
       </div>
       <div style={[styles.courseItem, styles.border]}>
         <img style={[styles.image, styles.imageMarginRight]} src={classPhoto5} alt="class" />
-        <div style={styles.introInfoWrapper}>
-          <h2 style={styles.introInfoTitle}>各級證照同等技術課程</h2>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程天數：</span>
-            4天 (09:00~17:00)
-          </p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>參加者資格：</span>
-            滿十八歲身體健康，無其他資格限制。
-          </p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程內容：</span>
-            等同於證照課程內容，扣除證照課程最後一天的考試，課程結束後沒有證照。
-          </p>
+        <div style={styles.InfoSmallWrapper}>
+          <div style={styles.introInfoWrapper}>
+            <h2 style={styles.introInfoTitle}>各級證照同等技術課程</h2>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程天數：</span>
+              4天 (09:00~17:00)
+            </p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>參加者資格：</span>
+              滿十八歲身體健康，無其他資格限制。
+            </p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程內容：</span>
+              等同於證照課程內容，扣除證照課程最後一天的考試，課程結束後沒有證照。
+            </p>
+          </div>
           <div style={styles.infoWrapper}>
             <p style={styles.infoTitle}>課程收費</p>
             <div style={styles.priceWrapper}>
@@ -204,25 +286,27 @@ function CourseContentSection() {
       </div>
       <div style={[styles.courseItem, styles.border]}>
         <img style={[styles.image, styles.imageMarginRight]} src={classPhoto6} alt="class" />
-        <div style={styles.introInfoWrapper}>
-          <h2 style={styles.introInfoTitle}>回娘家專案複習課程(一/二級)</h2>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程天數：</span>
-            4天(9:00~17:00)
-          </p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>參加資格：</span>
-            持有TRAA或IRATA或SPRAT效期內證照正本之本人。
-          </p>
-          <p style={styles.content}>(參加複習課程時需帶來備查才可上課)</p>
-          <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT一級證照者，可報名參加一級複習課程。</p>
-          <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT二級證照者，可報名參加一級或二級複習課程。</p>
-          <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT三級證照者，可報名參加一級、二級或三級複習課程。</p>
-          <p style={styles.content}>有上過將將教練授課之各級同等技術課程的學生，可報名參加該級複習課程。</p>
-          <p style={styles.content}>
-            <span style={styles.optionTitle}>課程內容：</span>
-            各級證照課程內容。
-          </p>
+        <div style={styles.InfoSmallWrapper}>
+          <div style={styles.introInfoWrapper}>
+            <h2 style={styles.introInfoTitle}>回娘家專案複習課程(一/二級)</h2>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程天數：</span>
+              4天(9:00~17:00)
+            </p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>參加資格：</span>
+              持有TRAA或IRATA或SPRAT效期內證照正本之本人。
+            </p>
+            <p style={styles.content}>(參加複習課程時需帶來備查才可上課)</p>
+            <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT一級證照者，可報名參加一級複習課程。</p>
+            <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT二級證照者，可報名參加一級或二級複習課程。</p>
+            <p style={styles.content}>持有效期內TRAA或IRATA或SPRAT三級證照者，可報名參加一級、二級或三級複習課程。</p>
+            <p style={styles.content}>有上過將將教練授課之各級同等技術課程的學生，可報名參加該級複習課程。</p>
+            <p style={styles.content}>
+              <span style={styles.optionTitle}>課程內容：</span>
+              各級證照課程內容。
+            </p>
+          </div>
           <div style={styles.infoWrapper}>
             <p style={styles.infoTitle}>課程收費</p>
             <div style={styles.priceWrapper}>
