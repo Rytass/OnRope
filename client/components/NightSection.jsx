@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 import Button from './elements/Button.jsx';
 import night from '../static/images/icon-night.png';
 
@@ -13,12 +14,34 @@ const styles = {
     alignItems: 'flex-start',
     backgroundColor: '#000',
     padding: '88px 0',
-    position: 'relative',
+    '@media (max-width: 1200px)': {
+      flexDirection: 'column',
+      padding: '0 0 56px 0',
+    },
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      padding: '0 0 48px 0',
+    },
   },
   vedioWrapper: {
     width: 600,
     height: 338,
     margin: '0 60px 0 0',
+    '@media (max-width: 1200px)': {
+      width: '100%',
+      height: 433,
+      margin: 0,
+    },
+    '@media (max-width: 767px)': {
+      width: '100%',
+      height: 338,
+      margin: 0,
+    },
+    '@media (max-width: 479px)': {
+      width: '100%',
+      height: 211,
+      margin: 0,
+    },
   },
   iframe: {
     border: 0,
@@ -31,6 +54,10 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    position: 'relative',
+    '@media (max-width: 1200px)': {
+      alignItems: 'center',
+    },
   },
   title: {
     fontSize: 24,
@@ -39,6 +66,14 @@ const styles = {
     letterSpacing: 2,
     color: 'rgba(255, 255, 255, 0.92)',
     margin: '0 0 10px 0',
+    '@media (max-width: 1200px)': {
+      width: 600,
+      margin: '40px 0 10px 0',
+    },
+    '@media (max-width: 767px)': {
+      width: 327,
+      margin: '24px 0 10px 0',
+    },
   },
   subtitle: {
     fontSize: 16,
@@ -47,6 +82,14 @@ const styles = {
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: 0,
+    '@media (max-width: 1200px)': {
+      width: 600,
+      margin: '0 0 16px 0',
+    },
+    '@media (max-width: 767px)': {
+      width: 327,
+      margin: '0 0 40px 0',
+    },
   },
   infoWrapper: {
     flex: 1,
@@ -81,8 +124,16 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     backgroundImage: `url(${night})`,
     position: 'absolute',
-    top: 88,
-    right: 60,
+    top: 0,
+    right: 0,
+    '@media (max-width: 1200px)': {
+      top: 42,
+      right: 40,
+    },
+    '@media (max-width: 479px)': {
+      top: 32,
+      right: 32,
+    },
   },
 };
 
@@ -106,11 +157,11 @@ function NightSection() {
             <p style={styles.infoText}>7堂 / 共計28小時</p>
           </div>
           <Button text="立即報名" url="https://reurl.cc/pmRx8" isThin />
+          <div style={styles.image} />
         </div>
       </div>
-      <div style={styles.image} />
     </div>
   );
 }
 
-export default NightSection;
+export default radium(NightSection);
