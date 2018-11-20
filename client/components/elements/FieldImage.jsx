@@ -16,9 +16,26 @@ const styles = {
     backgroundRepeat: 'no-repeat',
     position: 'relative',
     padding: '0 34px',
+    '@media (max-width: 1023px)': {
+      padding: '0 24px',
+      height: 319,
+    },
+    '@media (max-width: 767px)': {
+      width: '100%',
+    },
+    '@media (max-width: 479px)': {
+      width: '100%',
+      height: 267,
+    },
   },
   bigPadding: {
     padding: '0 357px',
+    '@media (max-width: 1023px)': {
+      padding: '0 84px',
+    },
+    '@media (max-width: 767px)': {
+      padding: '0 24px',
+    },
   },
   textWrapper: {
     display: 'flex',
@@ -35,6 +52,12 @@ const styles = {
     letterSpacing: 2,
     color: '#fff',
     zIndex: 10,
+    '@media (max-width: 1023px)': {
+      margin: '0 0 16px 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: '0 0 8px 0',
+    },
   },
   content: {
     margin: '22px 0 0 0',
@@ -44,10 +67,16 @@ const styles = {
     color: '#fff',
     textAlign: 'center',
     zIndex: 10,
+    '@media (max-width: 1023px)': {
+      margin: 0,
+    },
   },
   absoluteContent: {
     position: 'absolute',
     top: 62,
+    '@media (max-width: 1023px)': {
+      position: 'static',
+    },
   },
   blackBackground: {
     width: '100%',
@@ -73,7 +102,7 @@ class FieldImage extends PureComponent<Props> {
     super(props);
 
     this.state = {
-      isHovered: false,
+      isHovered: window.innerWidth < 768,
     };
   }
 
@@ -91,8 +120,16 @@ class FieldImage extends PureComponent<Props> {
 
     return (
       <div
-        onMouseOver={() => this.setState({ isHovered: true })}
-        onMouseOut={() => this.setState({ isHovered: false })}
+        onMouseOver={() => {
+          if (window.innerWidth >= 768) {
+            this.setState({ isHovered: true });
+          }
+        }}
+        onMouseOut={() => {
+          if (window.innerWidth >= 768) {
+            this.setState({ isHovered: false });
+          }
+        }}
         style={[
           styles.wrapper,
           { backgroundImage: `url(${image})` },

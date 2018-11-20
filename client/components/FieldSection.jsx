@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 import FieldImage from './elements/FieldImage.jsx';
 import place1 from '../static/images/place-01.png';
 import place2 from '../static/images/place-02.png';
@@ -22,6 +23,12 @@ const styles = {
     letterSpacing: 1.5,
     color: '#2fa3c4',
     margin: '80px 0 48px 0',
+    '@media (max-width: 767px)': {
+      margin: '60px 0 48px 0',
+    },
+    '@media (max-width: 476px)': {
+      margin: '48px 0 30px 0',
+    },
   },
   imagesWrapper: {
     width: '100%',
@@ -29,6 +36,9 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+    },
   },
 };
 
@@ -60,4 +70,4 @@ function FieldSection() {
   );
 }
 
-export default FieldSection;
+export default radium(FieldSection);
