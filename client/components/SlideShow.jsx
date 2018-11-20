@@ -25,6 +25,9 @@ const styles = {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
+    '@media (max-width: 479px)': {
+      height: 509,
+    },
   },
   statusDotWrapper: {
     width: '100%',
@@ -49,6 +52,12 @@ const styles = {
     position: 'absolute',
     left: 209,
     bottom: 130,
+    '@media (max-width: 1023px) and (min-width: 480px)': {
+      left: 32,
+    },
+    '@media (max-width: 479px)': {
+      left: 24,
+    },
   },
   text: {
     fontSize: 48,
@@ -57,6 +66,10 @@ const styles = {
     color: '#fff',
     margin: 0,
     textShadow: '0 0 12px rgba(0, 0, 0, 0.7)',
+    '@media (max-width: 479px)': {
+      fontSize: 36,
+      letterSpacing: 0.8,
+    },
   },
 };
 

@@ -12,6 +12,9 @@ const styles = {
     backgroundColor: 'transparent',
     zIndex: 999,
     pointerEvents: 'auto',
+    '@media (max-width: 479px)': {
+      display: 'none',
+    },
   },
 };
 

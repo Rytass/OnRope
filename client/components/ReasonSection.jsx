@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 
 const styles = {
   wrapper: {
@@ -9,6 +10,9 @@ const styles = {
     display: 'flex',
     justifyContent: 'center',
     padding: '76px 0',
+    '@media (max-width: 479px)': {
+      padding: '48px 0',
+    },
   },
   textBlock: {
     width: 600,
@@ -16,6 +20,9 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'center',
     alignItems: 'center',
+    '@media (max-width: 479px)': {
+      width: 327,
+    },
   },
   title: {
     fontSize: 32,
@@ -52,4 +59,4 @@ function ReasonSection() {
   );
 }
 
-export default ReasonSection;
+export default radium(ReasonSection);
