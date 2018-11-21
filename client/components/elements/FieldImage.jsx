@@ -58,6 +58,9 @@ const styles = {
     '@media (max-width: 767px)': {
       margin: '0 0 8px 0',
     },
+    '@media (max-width: 374px)': {
+      fontSize: 24,
+    },
   },
   content: {
     margin: '22px 0 0 0',
@@ -69,6 +72,9 @@ const styles = {
     zIndex: 10,
     '@media (max-width: 1023px)': {
       margin: 0,
+    },
+    '@media (max-width: 374px)': {
+      fontSize: 14,
     },
   },
   absoluteContent: {

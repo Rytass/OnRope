@@ -58,6 +58,9 @@ const styles = {
     '@media (max-width: 479px)': {
       left: 24,
     },
+    '@media (max-width: 374px)': {
+      left: 12,
+    },
   },
   text: {
     fontSize: 48,

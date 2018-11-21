@@ -28,6 +28,9 @@ const styles = {
     '@media (max-width: 1250px)': {
       margin: '0 0 24px 0',
     },
+    '@media (max-width: 374px)': {
+      fontSize: 40,
+    },
   },
   eventWrapper: {
     display: 'flex',
@@ -68,11 +71,19 @@ const styles = {
       height: 210,
       margin: '0 16px 0 0',
     },
+    '@media (max-width: 374px)': {
+      width: 280,
+      height: 184,
+      margin: '0 16px 0 0',
+    },
   },
   eventContentWrapper: {
     width: 560,
     '@media (max-width: 767px)': {
       width: 320,
+    },
+    '@media (max-width: 374px)': {
+      width: 280,
     },
   },
   contentTitle: {

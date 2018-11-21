@@ -134,6 +134,10 @@ const styles = {
       width: 327,
       margin: '0 auto',
     },
+    '@media (max-width: 374px)': {
+      width: 307,
+      margin: '0 auto',
+    },
   },
   introInfoPadding: {
     padding: '0 0 0 60px',

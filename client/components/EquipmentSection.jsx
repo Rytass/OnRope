@@ -33,6 +33,9 @@ const styles = {
     '@media (max-width: 1200px)': {
       margin: '48px 0',
     },
+    '@media (max-width: 374px)': {
+      fontSize: 30,
+    },
   },
   subtitle: {
     fontSize: 28,
@@ -40,6 +43,9 @@ const styles = {
     letterSpacing: 2,
     color: '#fff',
     margin: '0 0 24px 0',
+    '@media (max-width: 374px)': {
+      fontSize: 24,
+    },
   },
   equipsWrapper: {
     '@media (max-width: 1200px)': {

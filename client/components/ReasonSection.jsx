@@ -29,6 +29,9 @@ const styles = {
     '@media (max-width: 479px)': {
       width: 327,
     },
+    '@media (max-width: 374px)': {
+      width: 307,
+    },
   },
   title: {
     fontSize: 32,

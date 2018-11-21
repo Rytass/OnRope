@@ -74,6 +74,10 @@ const styles = {
       width: 327,
       margin: '24px 0 10px 0',
     },
+    '@media (max-width: 374px)': {
+      width: 307,
+      margin: '24px 0 10px 0',
+    },
   },
   subtitle: {
     fontSize: 16,
@@ -88,6 +92,10 @@ const styles = {
     },
     '@media (max-width: 767px)': {
       width: 327,
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 374px)': {
+      width: 307,
       margin: '0 0 40px 0',
     },
   },

@@ -62,6 +62,10 @@ const styles = {
       height: 327,
       width: 327,
     },
+    '@media (max-width: 374px)': {
+      height: 307,
+      width: 307,
+    },
   },
   arrowButton: {
     display: 'flex',

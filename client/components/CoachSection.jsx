@@ -52,6 +52,9 @@ const styles = {
     '@media (max-width: 767px)': {
       padding: '24px 12px',
     },
+    '@media (max-width: 374px)': {
+      padding: '24px 0',
+    },
   },
   coachWrapper: {
     display: 'flex',

@@ -49,11 +49,15 @@ const styles = {
     width: 0,
     height: 0,
     position: 'absolute',
-    bottom: -33,
+    bottom: -26,
     left: 0,
     borderLeft: '84px solid transparent',
     borderRight: '84px solid transparent',
-    borderTop: '33px solid #343534',
+    borderTop: '26px solid #343534',
+    '@media (max-width: 374px)': {
+      borderLeft: '60px solid transparent',
+      borderRight: '60px solid transparent',
+    },
   },
   logoSquare: {
     width: 168,
@@ -62,6 +66,9 @@ const styles = {
     position: 'absolute',
     display: 'flex',
     justifyContent: 'center',
+    '@media (max-width: 374px)': {
+      width: 120,
+    },
   },
   logo: {
     width: 92,

@@ -56,12 +56,17 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     margin: '48px 0 0 0',
-    '@media (max-width: 1023px)': {
+    '@media (min-width: 1024px)': {
       margin: '40px 0 0 0',
       width: 600,
     },
-    '@media (max-width: 767px)': {
+    '@media (max-width: 767px) and (min-width)': {
+      margin: '40px 0 0 0',
       width: 327,
+    },
+    '@media (max-width: 374px)': {
+      margin: '40px 0 0 0',
+      width: 307,
     },
   },
   text: {
@@ -125,8 +130,15 @@ const styles = {
       margin: '0 auto',
       alignItems: 'center',
     },
-    '@media (max-width: 767px)': {
+    '@media (max-width: 767px) and (min-width: 375px)': {
+      margin: '0 auto',
+      alignItems: 'center',
       width: 327,
+    },
+    '@media (max-width: 374px)': {
+      width: 307,
+      margin: '0 auto',
+      alignItems: 'center',
     },
   },
   introInfoTitle: {

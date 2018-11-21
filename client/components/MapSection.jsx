@@ -26,11 +26,18 @@ const styles = {
     letterSpacing: 2,
     color: '#fff',
     margin: 0,
+    '@media (max-width: 767px)': {
+      textAlign: 'center',
+      margin: '0 24px',
+    },
   },
   map: {
     width: '100%',
     height: 567,
     margin: '56px 0 0 0',
+    '@media (max-width: 374px)': {
+      height: 500,
+    },
   },
   infoWrapper: {
     width: '100%',
@@ -130,7 +137,7 @@ class MapSection extends PureComponent {
   });
 
   componentDidMount() {
-    // this.renderMap();
+    this.renderMap();
   }
 
   renderMap() {

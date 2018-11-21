@@ -31,6 +31,11 @@ const styles = {
       alignItems: 'center',
       padding: '69px 36px 24px 36px',
     },
+    '@media (max-width: 374px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '69px 12px 24px 12px',
+    },
   },
   footerWrapper: {
     flex: 1,

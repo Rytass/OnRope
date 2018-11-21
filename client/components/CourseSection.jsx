@@ -66,6 +66,10 @@ const styles = {
       padding: '20px 0 56px 0',
       width: 327,
     },
+    '@media (max-width: 374px)': {
+      padding: '20px 0 56px 0',
+      width: 307,
+    },
   },
   infoTitle: {
     fontSize: 24,
@@ -80,6 +84,10 @@ const styles = {
     },
     '@media (max-width: 479px)': {
       fontSize: 20,
+      margin: '0 0 8px 0',
+    },
+    '@media (max-width: 374px)': {
+      letterSpacing: 1,
       margin: '0 0 8px 0',
     },
   },

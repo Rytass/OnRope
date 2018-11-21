@@ -9,6 +9,9 @@ const styles = {
     height: 48,
     borderRadius: 4,
     backgroundColor: '#4bb3d0',
+    '@media (max-width: 374px)': {
+      width: 307,
+    },
   },
   button: {
     width: 320,
@@ -18,6 +21,9 @@ const styles = {
     cursor: 'pointer',
     border: 0,
     outline: 0,
+    '@media (max-width: 374px)': {
+      width: 307,
+    },
   },
   highter: {
     height: 58,

@@ -59,8 +59,11 @@ const styles = {
   },
   rentContentWrapper: {
     width: 600,
-    '@media (max-width: 767px)': {
+    '@media (max-width: 767px) and (min-width: 375px)': {
       width: 327,
+    },
+    '@media (max-width: 374px)': {
+      width: 307,
     },
   },
   contentText: {
@@ -132,17 +135,26 @@ const styles = {
       height: 375,
       margin: 0,
     },
+    '@media (max-width: 374px)': {
+      width: 320,
+      height: 320,
+      margin: 0,
+    },
   },
   productContentWrapper: {
     width: 408,
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
-    '@media (max-width: 1300px)': {
+    '@media (min-width: 1301px)': {
       width: 321,
     },
-    '@media (max-width: 767px)': {
+    '@media (max-width: 767px) and (min-width: 375px)': {
       width: 327,
+      margin: '0 auto',
+    },
+    '@media (max-width: 374px)': {
+      width: 307,
       margin: '0 auto',
     },
   },
