@@ -48,12 +48,6 @@ module.exports = {
     filename: 'bundle.js',
     historyApiFallback: true,
     host: '0.0.0.0',
-    proxy: {
-      '/locales': {
-        target: 'http://localhost:4600',
-        bypass: req => req.path.replace(/^\/locales\//, ''),
-      },
-    },
   },
   module: {
     rules: [

@@ -153,7 +153,7 @@ function NightSection() {
           style={styles.iframe}
           title="video"
           frameBorder={0}
-          src="https://youtu.be/cGmmHX9dRmU" />
+          src="https://youtube.com/embed/cGmmHX9dRmU?rel=0&iv_load_policy=3" />
       </div>
       <div style={styles.nightInfoWrapper}>
         <h2 style={styles.title}>TRAA一級繩索技術證照夜間班開課了</h2>

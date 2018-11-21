@@ -5,6 +5,10 @@
   "main": "client/entry.js",
   "scripts": {
     "client": "webpack-dev-server --host 0.0.0.0 --config ./client/webpack.config.js",
+    "build": "cd client && NODE_ENV=production webpack --optimize-minimize --optimize-dedupe -p",
+    "docker": "cd client && docker build -f Dockerfile -t asia.gcr.io/develop-server/onrope .",
+    "clean": "rm -rf client/dist",
+    "deploy": "npm run build && npm run docker && npm run clean",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

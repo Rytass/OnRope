@@ -222,7 +222,7 @@ function VerticalSection() {
             style={styles.iframe}
             title="video"
             frameBorder={0}
-            src="https://youtu.be/CqCAcZu0R1c" />
+            src="https://youtube.com/embed/CqCAcZu0R1c?rel=0&iv_load_policy=3" />
         </div>
         <div style={styles.introInfoWrapper}>
           <h2 style={styles.introInfoTitle}>本中心是目前台灣唯一擁有專門垂直舞蹈的教室，最專業的空間，最安全的環境</h2>
