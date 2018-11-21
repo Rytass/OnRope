@@ -1,6 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
+import radium from 'radium';
 
 const styles = {
   wrapper: {
@@ -39,6 +40,9 @@ const styles = {
     alignItems: 'center',
     padding: '56px 0',
     backgroundImage: 'linear-gradient(102deg, #5cd0e4, #2fa3c4)',
+    '@media (max-width: 1050px)': {
+      padding: '48px 0 16px 0',
+    },
   },
   infoTitle: {
     fontSize: 28,
@@ -53,11 +57,19 @@ const styles = {
     letterSpacing: 1.1,
     color: '#1b4550',
     margin: '16px 0',
+    '@media (max-width: 1050px)': {
+      margin: '16px 0 8px 0',
+    },
   },
   trafficWrapper: {
     display: 'flex',
     flexDirection: 'row',
     padding: '32px 0 0 0',
+    flexWrap: 'wrap',
+    '@media (max-width: 1050px)': {
+      justifyContent: 'center',
+      padding: 0,
+    },
   },
   trafficBlock: {
     width: 420,
@@ -66,6 +78,14 @@ const styles = {
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     margin: '0 19px',
+    '@media (max-width: 1390px)': {
+      width: 312,
+      margin: 16,
+    },
+    '@media (max-width: 767px)': {
+      width: 304,
+      margin: '8px 0',
+    },
   },
   trafficTitle: {
     fontSize: 14,
@@ -78,9 +98,20 @@ const styles = {
   trafficContent: {
     fontSize: 14,
     lineHeight: '24px',
-    letterSpacing: 1,
+    letterSpacing: 0.7,
     color: '#1b4550',
     margin: 0,
+    wordBreak: 'break-all',
+  },
+  sapceBlock: {
+    '@media (max-width: 1050px)': {
+      width: 312,
+      margin: 16,
+    },
+    '@media (max-width: 767px)': {
+      width: 304,
+      margin: '8px 0',
+    },
   },
 };
 
@@ -164,11 +195,10 @@ class MapSection extends PureComponent {
               <p style={styles.trafficTitle}>機場捷運線</p>
               <p style={styles.trafficContent}>泰山貴和站 轉乘下列公車至 明志國小站，步行五分鐘可到達</p>
               <p style={styles.trafficContent}>
-                637/638/797/798/801/858/880/883/898/1501/1503/
-                {'\n'}
-                F211
+                637/638/797/798/801/858/880/883/898/1501/1503/F211
               </p>
             </div>
+            <div style={styles.sapceBlock} />
           </div>
         </div>
       </div>
@@ -176,4 +206,4 @@ class MapSection extends PureComponent {
   }
 }
 
-export default MapSection;
+export default radium(MapSection);
