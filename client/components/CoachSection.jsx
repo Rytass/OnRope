@@ -1,6 +1,7 @@
 // @flow
 
 import React from 'react';
+import radium from 'radium';
 import Avatar from './elements/Avatar.jsx';
 import avatar1 from '../static/images/avatar-01.png';
 import avatar2 from '../static/images/avatar-02.png';
@@ -24,6 +25,9 @@ const styles = {
     fontWeight: 600,
     letterSpacing: 1.5,
     color: '#2fa3c4',
+    '@media (max-width: 1250px)': {
+      margin: '22px 0',
+    },
   },
   sectionWrapper: {
     width: '100%',
@@ -42,6 +46,12 @@ const styles = {
     borderColor: '#398297',
     margin: '0 0 20px 0',
     padding: '0 70px 36px 70px',
+    '@media (max-width: 1250px)': {
+      padding: '0 22px 12px 22px',
+    },
+    '@media (max-width: 767px)': {
+      padding: '24px 12px',
+    },
   },
   coachWrapper: {
     display: 'flex',
@@ -54,6 +64,16 @@ const styles = {
     borderColor: '#398297',
     width: '100%',
     margin: '0 0 124px 0',
+    '@media (max-width: 1250px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+      padding: '48px 0 132px 0',
+      margin: '0 0 28px 0',
+    },
+    '@media (max-width: 767px)': {
+      padding: '24px 0 28px 0',
+      margin: '0 0 24px 0',
+    },
   },
   coachAvatarWrapper: {
     display: 'flex',
@@ -61,6 +81,9 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     margin: '0 18px 0 0',
+    '@media (max-width: 1250px)': {
+      margin: 0,
+    },
   },
   avatar: {
     width: 293,
@@ -72,6 +95,9 @@ const styles = {
     letterSpacing: 1,
     color: '#fff',
     maring: '42px 0 21px 0',
+    '@media (max-width: 1250px)': {
+      maring: '35px 0 21px 0',
+    },
   },
   position: {
     fontSize: 18,
@@ -81,12 +107,30 @@ const styles = {
     color: '#4bb3d0',
     margin: 0,
   },
+  infoBigWrapper: {
+    display: 'flex',
+    '@media (max-width: 1250px)': {
+      padding: '24px 0 0 0',
+    },
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+    },
+  },
   infoWrapper: {
     width: 304,
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+  },
+  infoWrapperMargin: {
+    margin: '0 76px 0 0',
+    '@media (max-width: 1250px)': {
+      margin: '0 48px 0 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: 0,
+    },
   },
   infoTitle: {
     fontSize: 14,
@@ -112,6 +156,14 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'space-between',
     padding: '28px 0',
+    '@media (max-width: 1250px)': {
+      width: 656,
+    },
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      width: 304,
+      padding: 0,
+    },
   },
 };
 
@@ -127,44 +179,46 @@ function CoachSection() {
               <p style={styles.name}>朱將輔</p>
               <p style={styles.position}>總教練</p>
             </div>
-            <div style={styles.infoWrapper}>
-              <div style={styles.infoContentWrapper}>
-                <p style={styles.infoTitle}>工程經歷</p>
-                <p style={styles.contentText}>風力發電機保養維修工程</p>
-                <p style={styles.contentText}>電廠鍋爐煙囪及冷凝管維護保養</p>
-                <p style={styles.contentText}>桃園機場航廈高空裝置藝術保養</p>
-                <p style={styles.contentText}>美術館大型畫作高空吊掛</p>
-                <p style={styles.contentText}>國際藝術節高空舞團演出系統架設</p>
-                <p style={styles.contentText}>一般建築外牆檢測</p>
+            <div style={styles.infoBigWrapper}>
+              <div style={[styles.infoWrapper, styles.infoWrapperMargin]}>
+                <div style={styles.infoContentWrapper}>
+                  <p style={styles.infoTitle}>工程經歷</p>
+                  <p style={styles.contentText}>風力發電機保養維修工程</p>
+                  <p style={styles.contentText}>電廠鍋爐煙囪及冷凝管維護保養</p>
+                  <p style={styles.contentText}>桃園機場航廈高空裝置藝術保養</p>
+                  <p style={styles.contentText}>美術館大型畫作高空吊掛</p>
+                  <p style={styles.contentText}>國際藝術節高空舞團演出系統架設</p>
+                  <p style={styles.contentText}>一般建築外牆檢測</p>
+                </div>
+                <div>
+                  <p style={styles.infoTitle}>教學經歷</p>
+                  <p style={styles.contentText}>各級繩索證照訓練官及考官</p>
+                  <p style={styles.contentText}>國際風力發電機大廠Vestas外籍工程師繩索證照課程講師</p>
+                  <p style={styles.contentText}>澳門中葡職業學校繩索課程受邀講師</p>
+                  <p style={styles.contentText}>現任國立台灣戲曲學院高空作業證照講師</p>
+                  <p style={styles.contentText}>為台灣唯一具資格核發工業繩索證照女教練</p>
+                </div>
               </div>
-              <div>
-                <p style={styles.infoTitle}>教學經歷</p>
-                <p style={styles.contentText}>各級繩索證照訓練官及考官</p>
-                <p style={styles.contentText}>國際風力發電機大廠Vestas外籍工程師繩索證照課程講師</p>
-                <p style={styles.contentText}>澳門中葡職業學校繩索課程受邀講師</p>
-                <p style={styles.contentText}>現任國立台灣戲曲學院高空作業證照講師</p>
-                <p style={styles.contentText}>為台灣唯一具資格核發工業繩索證照女教練</p>
-              </div>
-            </div>
-            <div style={styles.infoWrapper}>
-              <div style={styles.infoContentWrapper}>
-                <p style={styles.infoTitle}>比賽經歷</p>
-                <p style={styles.contentText}>連續五年Grimpday繩索救援大賽參賽</p>
-                <p style={styles.contentText}>連續五年"橋"台灣繩索搜救大賽之評核員及大會安全官</p>
-              </div>
-              <div style={styles.infoContentWrapper}>
-                <p style={styles.infoTitle}>演出經歷</p>
-                <p style={styles.contentText}>代言運動品牌於大樓外牆現場塗鴉(12層樓面)</p>
-                <p style={styles.contentText}>綠色和平海洋減塑高空舞蹈訓練編排</p>
-              </div>
-              <div style={styles.infoContentWrapper}>
-                <p style={styles.infoTitle}>其他</p>
-                <p style={styles.contentText}>撰寫攀登裝備各項產品中英文技術說明書</p>
-                <p style={styles.contentText}>台灣唯一具英國IRATA/美國SPRAT/台灣TRAA三級證照之女性</p>
-              </div>
-              <div>
-                <p style={styles.infoTitle}>其他相關證照</p>
-                <p style={styles.contentText}>建築物外牆安全檢查人員, SKYLOTEC PPE & PFPE 裝備檢查員，SKYLOTEC 米蘭基礎救援</p>
+              <div style={styles.infoWrapper}>
+                <div style={styles.infoContentWrapper}>
+                  <p style={styles.infoTitle}>比賽經歷</p>
+                  <p style={styles.contentText}>連續五年Grimpday繩索救援大賽參賽</p>
+                  <p style={styles.contentText}>連續五年"橋"台灣繩索搜救大賽之評核員及大會安全官</p>
+                </div>
+                <div style={styles.infoContentWrapper}>
+                  <p style={styles.infoTitle}>演出經歷</p>
+                  <p style={styles.contentText}>代言運動品牌於大樓外牆現場塗鴉(12層樓面)</p>
+                  <p style={styles.contentText}>綠色和平海洋減塑高空舞蹈訓練編排</p>
+                </div>
+                <div style={styles.infoContentWrapper}>
+                  <p style={styles.infoTitle}>其他</p>
+                  <p style={styles.contentText}>撰寫攀登裝備各項產品中英文技術說明書</p>
+                  <p style={styles.contentText}>台灣唯一具英國IRATA/美國SPRAT/台灣TRAA三級證照之女性</p>
+                </div>
+                <div>
+                  <p style={styles.infoTitle}>其他相關證照</p>
+                  <p style={styles.contentText}>建築物外牆安全檢查人員, SKYLOTEC PPE & PFPE 裝備檢查員，SKYLOTEC 米蘭基礎救援</p>
+                </div>
               </div>
             </div>
           </div>
@@ -278,4 +332,4 @@ function CoachSection() {
   );
 }
 
-export default CoachSection;
+export default radium(CoachSection);

@@ -9,6 +9,13 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
+    '@media (max-width: 1250px)': {
+      flexDirection: 'column',
+      alignItems: 'center',
+    },
+    '@media (max-width: 767px)': {
+      margin: '24px 0',
+    },
   },
   avatarWrapper: {
     display: 'flex',
@@ -25,7 +32,7 @@ const styles = {
     lineHeight: 1.33,
     letterSpacing: 1,
     color: '#fff',
-    maring: '35px 0 20px 0',
+    margin: '35px 0 20px 0',
   },
   position: {
     fontSize: 18,
@@ -42,6 +49,9 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'flex-start',
     margin: '0 0 0 40px',
+    '@media (max-width: 1250px)': {
+      margin: '24px 0 0 0',
+    },
   },
   infoTitle: {
     fontSize: 14,
