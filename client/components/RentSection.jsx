@@ -1,6 +1,7 @@
 // @flex
 
 import React from 'react';
+import radium from 'radium';
 import Button from './elements/Button.jsx';
 import fieldImage from '../static/images/eq-photo-01.png';
 import productImage from '../static/images/product-01.png';
@@ -21,6 +22,10 @@ const styles = {
     letterSpacing: 2,
     color: 'rgba(255, 255, 255, 0.92)',
     margin: '80px 0 48px 0',
+    '@media (max-width: 767px)': {
+      fontSize: 28,
+      margin: '48px 0 24px 0',
+    },
   },
   rentWrapper: {
     width: '100%',
@@ -28,14 +33,35 @@ const styles = {
     flexDirection: 'row',
     justifyContent: 'center',
     alignItems: 'flex-start',
+    '@media (max-width: 1300px)': {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+    },
   },
   fieldImage: {
     width: 600,
     height: 380,
     margin: '0 60px 0 0',
+    '@media (max-width: 1300px)': {
+      margin: '0 0 40px 0',
+    },
+    '@media (max-width: 767px)': {
+      width: '100%',
+      height: 290,
+      margin: '0 0 25px 0',
+    },
+    '@media (max-width: 479px)': {
+      width: '100%',
+      height: 211,
+      margin: '0 0 25px 0',
+    },
   },
   rentContentWrapper: {
     width: 600,
+    '@media (max-width: 767px)': {
+      width: 327,
+    },
   },
   contentText: {
     fontSize: 16,
@@ -67,6 +93,9 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     padding: '48px 0 0 0',
+    '@media (max-width: 1300px)': {
+      padding: '40px 0 0 0',
+    },
   },
   rentHintText: {
     fontSize: 14,
@@ -82,17 +111,40 @@ const styles = {
     padding: '120px 0',
     justifyContent: 'center',
     alignItems: 'flex-start',
+    '@media (max-width: 767px)': {
+      flexDirection: 'column',
+      justifyContent: 'flex-start',
+      alignItems: 'center',
+      padding: '80px 0',
+    },
   },
   productImage: {
     width: 400,
     height: 400,
     margin: '0 40px 0 0',
+    '@media (max-width: 1300px)': {
+      width: 375,
+      height: 375,
+      margin: '0 24px 0 0',
+    },
+    '@media (max-width: 767px)': {
+      width: 375,
+      height: 375,
+      margin: 0,
+    },
   },
   productContentWrapper: {
     width: 408,
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
+    '@media (max-width: 1300px)': {
+      width: 321,
+    },
+    '@media (max-width: 767px)': {
+      width: 327,
+      margin: '0 auto',
+    },
   },
   productTitle: {
     fontSize: 28,
@@ -100,6 +152,9 @@ const styles = {
     letterSpacing: 2,
     color: '#fff',
     margin: '0 0 24px 0',
+    '@media (max-width: 767px)': {
+      margin: '24px 0',
+    },
   },
   productContent: {
     fontSize: 14,
@@ -113,6 +168,9 @@ const styles = {
     flex: 1,
     display: 'flex',
     alignItems: 'flex-end',
+    '@media (max-width: 767px)': {
+      margin: '32px 0 0 0',
+    },
   },
 };
 
@@ -165,4 +223,4 @@ function RentSection() {
   );
 }
 
-export default RentSection;
+export default radium(RentSection);

@@ -67,6 +67,12 @@ const styles = {
     justifyContent: 'flex-start',
     alignItems: 'center',
     padding: '16px 0 64px 0',
+    '@media (max-width: 1200px)': {
+      padding: '16px 0 60px 0',
+    },
+    '@media (max-width: 479px)': {
+      padding: '16px 0 48px 0',
+    },
   },
   footerText: {
     fontSize: 16,
