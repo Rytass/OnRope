@@ -135,7 +135,7 @@ class MapSection extends PureComponent {
   renderMap() {
     this.map = new google.maps.Map(document.getElementById('map'), {
       center: { lat: 25.0432476, lng: 121.4275332 },
-      zoom: 18,
+      zoom: 17,
     });
 
     this.marker = new google.maps.Marker({
