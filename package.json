@@ -19,6 +19,7 @@
   "homepage": "https://github.com/Rytass/OnRope#readme",
   "dependencies": {
     "@babel/runtime": "^7.1.2",
+    "animated-scroll-to": "^1.2.2",
     "debug": "^4.1.0",
     "history": "^4.7.2",
     "radium": "^0.25.0",

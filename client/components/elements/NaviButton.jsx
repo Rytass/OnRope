@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import radium from 'radium';
+import animateScrollTo from 'animated-scroll-to';
 
 const styles = {
   itemWrapper: {
@@ -55,6 +56,7 @@ class NaviButton extends PureComponent<Props> {
 
     if (prevProps.scrollY !== scrollY) {
       const element = document.getElementById(elementId);
+
       if (element) {
         const targetTop = element.offsetTop;
         const targetHeight = element.offsetHeight;
@@ -76,7 +78,7 @@ class NaviButton extends PureComponent<Props> {
     const element = document.getElementById(elementId);
     const targetHeight = element.offsetTop;
 
-    window.scrollTo(0, targetHeight);
+    animateScrollTo(targetHeight);
   }
 
   render() {
