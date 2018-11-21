@@ -2,6 +2,7 @@
 
 import React, { PureComponent } from 'react';
 import radium from 'radium';
+import marker from '../static/images/map-pin.png';
 
 const styles = {
   wrapper: {
@@ -133,8 +134,14 @@ class MapSection extends PureComponent {
 
   renderMap() {
     this.map = new google.maps.Map(document.getElementById('map'), {
-      center: { lat: 25.043467, lng: 121.427559 },
+      center: { lat: 25.0432476, lng: 121.4275332 },
       zoom: 18,
+    });
+
+    this.marker = new google.maps.Marker({
+      position: new google.maps.LatLng(25.0432476, 121.4275332),
+      icon: marker,
+      map: this.map,
     });
   }
 
