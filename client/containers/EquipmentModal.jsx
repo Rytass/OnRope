@@ -58,6 +58,10 @@ const styles = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     position: 'relative',
+    '@media (max-width: 767px)': {
+      height: 327,
+      width: 327,
+    },
   },
   arrowButton: {
     display: 'flex',
@@ -72,6 +76,10 @@ const styles = {
   arrowIcon: {
     width: 48,
     height: 48,
+    '@media (max-width: 767px)': {
+      height: 24,
+      width: 24,
+    },
   },
   cancelButton: {
     display: 'flex',
@@ -85,6 +93,10 @@ const styles = {
     position: 'absolute',
     top: 0,
     right: -43,
+    '@media (max-width: 767px)': {
+      top: -41,
+      right: 0,
+    },
   },
   cancelIcon: {
     width: 22,
