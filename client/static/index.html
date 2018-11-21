@@ -36,8 +36,13 @@
   </head>
   <body>
     <div id="root" />
-    <script src="https://openlayers.org/en/latest/build/ol.js"></script>
-    <script src="https://cdn.polyfill.io/v2/polyfill.js?features=fetch"></script>
+    <script>
+      window.onGoolgeMapsLoadedCallbacks = [];
+      function initMap() {
+        window.onGoolgeMapsLoadedCallbacks.forEach(cb => cb());
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIEEvjLgbjtPpK2VTe3yHqCmYok6QVjvM&callback=initMap" async defer></script>
     <script src="/bundle.js"></script>
   </body>
 </html>

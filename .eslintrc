@@ -23,6 +23,7 @@
     "__DEV__": true,
     "Response": true,
     "ol": false,
+    "google": false,
     "ReadableStream": true
   },
   "parser": "babel-eslint",

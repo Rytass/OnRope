@@ -123,53 +123,19 @@ const styles = {
 };
 
 class MapSection extends PureComponent {
-  static ICON_STYLE = new ol.style.Style({
-    image: new ol.style.Circle({
-      fill: new ol.style.Fill({
-        color: [0, 141, 207],
-      }),
-      radius: 10,
-      stroke: new ol.style.Stroke({
-        width: 3,
-        color: [255, 255, 255],
-      }),
-    }),
-  });
-
   componentDidMount() {
-    this.renderMap();
+    if (typeof google === 'undefined') {
+      window.onGoolgeMapsLoadedCallbacks.push(() => this.renderMap());
+    } else {
+      this.renderMap();
+    }
   }
 
   renderMap() {
-    const localX = 139.753027;
-    const localY = 25.074216;
-    this.markerSource = new ol.source.Vector();
-
-    const vectorLayer = new ol.layer.Vector({
-      source: this.markerSource,
+    this.map = new google.maps.Map(document.getElementById('map'), {
+      center: { lat: 25.043467, lng: 121.427559 },
+      zoom: 18,
     });
-
-    this.map = new ol.Map({
-      layers: [
-        new ol.layer.Tile({
-          source: new ol.source.OSM(),
-        }),
-        vectorLayer,
-      ],
-      target: 'map',
-      controls: [],
-      view: new ol.View({
-        center: [localX, localY],
-        zoom: 15,
-        maxZoom: 15,
-        minZoom: 15,
-        projection: 'EPSG:4326',
-      }),
-    });
-
-    const feature = new ol.Feature(new ol.geom.Point([localX, localY]));
-    feature.setStyle(MapSection.ICON_STYLE);
-    this.markerSource.addFeature(feature);
   }
 
   render() {
