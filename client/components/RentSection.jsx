@@ -146,7 +146,7 @@ const styles = {
     alignSelf: 'stretch',
     display: 'flex',
     flexDirection: 'column',
-    '@media (min-width: 1301px)': {
+    '@media (max-width: 1300px) and (min-width: 768px)': {
       width: 321,
     },
     '@media (max-width: 767px) and (min-width: 375px)': {
@@ -194,11 +194,11 @@ function RentSection() {
         <img src={fieldImage} alt="field" style={styles.fieldImage} />
         <div style={styles.rentContentWrapper}>
           <p style={styles.contentText}>
-            <span style={styles.blueText}>說明:</span>
+            <span style={styles.blueText}>說明：</span>
             租借場地如欲使用裝備(現場內使用)
           </p>
           <p style={styles.contentText}>
-            <span style={styles.blueText}>場租計算方式:</span>
+            <span style={styles.blueText}>場租計算方式：</span>
             以人計算，採現場收費
           </p>
           <p style={styles.contentText}>

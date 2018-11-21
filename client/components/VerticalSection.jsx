@@ -56,11 +56,11 @@ const styles = {
     justifyContent: 'center',
     alignItems: 'center',
     margin: '48px 0 0 0',
-    '@media (min-width: 1024px)': {
+    '@media (max-width: 1023px) and (min-width: 768px)': {
       margin: '40px 0 0 0',
       width: 600,
     },
-    '@media (max-width: 767px) and (min-width)': {
+    '@media (max-width: 767px) and (min-width: 375px)': {
       margin: '40px 0 0 0',
       width: 327,
     },
