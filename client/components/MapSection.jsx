@@ -104,7 +104,7 @@ const styles = {
     wordBreak: 'break-all',
   },
   sapceBlock: {
-    '@media (max-width: 1050px)': {
+    '@media (max-width: 1050px) and (min-width: 768px)': {
       width: 312,
       margin: 16,
     },

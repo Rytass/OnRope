@@ -17,6 +17,7 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-start',
     alignItems: 'center',
+    backgroundColor: '#1a2426',
   },
   title: {
     fontSize: 32,
