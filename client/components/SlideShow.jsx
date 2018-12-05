@@ -26,7 +26,7 @@ const styles = {
     backgroundPosition: 'center',
     backgroundRepeat: 'no-repeat',
     '@media (max-width: 479px)': {
-      height: 509,
+      height: 254,
     },
   },
   statusDotWrapper: {
@@ -56,9 +56,11 @@ const styles = {
       left: 32,
     },
     '@media (max-width: 479px)': {
+      bottom: 49,
       left: 24,
     },
     '@media (max-width: 374px)': {
+      bottom: 49,
       left: 12,
     },
   },
@@ -70,7 +72,7 @@ const styles = {
     margin: 0,
     textShadow: '0 0 12px rgba(0, 0, 0, 0.7)',
     '@media (max-width: 479px)': {
-      fontSize: 36,
+      fontSize: 24,
       letterSpacing: 0.8,
     },
   },
