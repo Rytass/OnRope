@@ -233,9 +233,8 @@ function VerticalSection() {
             接下來的一年多，朱老師也三度遠赴美國參加Bandaloop的舞蹈工作坊，將更多垂直舞蹈的經驗帶回台灣。Oh My Rope！瀚登小將的垂直舞蹈老師朱將輔，同時擁有台灣/英國/美國的工業繩索技術三級證照，也是目前台灣繩索技術協會唯一的女性教練及考官，這樣的背景讓她永遠會把"安全"擺在第一。
           </p>
           <div style={styles.infoWrapper}>
-            <p style={styles.infoTitle}>課程收費</p>
+            <p style={styles.infoTitle}>課程時數</p>
             <div style={styles.priceWrapper}>
-              <p style={styles.infoText}>NT$18,000元</p>
               <p style={styles.infoText}>4週 / 共計16小時</p>
             </div>
             <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />

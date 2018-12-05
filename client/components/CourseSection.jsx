@@ -102,16 +102,16 @@ const styles = {
   },
   linkWrapper: {
     flex: 1,
-    width: '100%',
+    width: 816,
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
     padding: '32px 0 0 0',
     '@media (max-width: 1023px) and (min-width: 480px)': {
-      padding: '32px 32px 0 32px',
+      padding: '32px 0 0 0',
     },
-    '@media (max-width: 767px) and (min-width: 480px)': {
+    '@media (max-width: 874px) and (min-width: 480px)': {
       flexDirection: 'column',
       alignItems: 'center',
       padding: 0,
@@ -123,7 +123,7 @@ const styles = {
     },
   },
   infoBlock: {
-    '@media (max-width: 767px) and (min-width: 480px)': {
+    '@media (max-width: 874px) and (min-width: 480px)': {
       margin: '24px 0 0 0',
     },
     '@media (max-width: 479px)': {
@@ -153,6 +153,13 @@ const styles = {
     letterSpacing: 1,
     color: 'rgba(255, 255, 255, 0.87)',
     margin: 0,
+  },
+  discountBigText: {
+    fontSize: 16,
+    lineHeight: 1,
+    letterSpacing: 1,
+    color: 'rgba(255, 255, 255, 0.92)',
+    margin: '0 0 10px 0',
   },
   discountText: {
     fontSize: 14,
@@ -191,11 +198,7 @@ function CourseSection() {
         <div style={styles.linkWrapper}>
           <div>
             <div style={styles.priceInfoWrapper}>
-              <p style={styles.priceTitle}>日間課程收費</p>
-              <p style={styles.priceHint}>
-                <span style={styles.priceText}>NT$14,000元</span>
-                (不包含證照費)
-              </p>
+              <p style={styles.priceTitle}>日間課程</p>
             </div>
             <Button text="個人報名" url="http://t.cn/RFIgZmd " isThin />
           </div>
@@ -206,6 +209,13 @@ function CourseSection() {
               <p style={styles.discountText}>(十人同行6.5折)</p>
             </div>
             <Button text="團體報名" url="https://reurl.cc/pmRx8" isThin />
+          </div>
+          <div style={styles.infoBlock}>
+            <div style={styles.priceInfoWrapper}>
+              <p style={styles.discountBigText}>L1證照班台中訓練場日夜間部</p>
+              <p style={styles.discountText}>台中市神岡區前寮路57-10號</p>
+            </div>
+            <Button text="台中場報名" url="https://docs.google.com/forms/d/1_6x5gOPCt4JtonZfHqHY5_lzohQu25-9b7L1oaT2Tnc/edit" isThin />
           </div>
         </div>
       </div>

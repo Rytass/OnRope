@@ -112,7 +112,7 @@ const styles = {
       alignItems: 'center',
     },
   },
-  InfoSmallWrapper: {
+  infoSmallWrapper: {
     width: '100%',
     display: 'flex',
     flexDirection: 'column',
@@ -186,7 +186,21 @@ const styles = {
     flexDirection: 'column',
     justifyContent: 'flex-end',
     alignItems: 'flex-start',
-    margin: '66px 0 0 0',
+    margin: '24px 0 0 0',
+    '@media (max-width: 1300px)': {
+      margin: '40px 0 0 0',
+    },
+    '@media (max-width: 767px)': {
+      margin: '24px 0 0 0',
+    },
+  },
+  infoSmallerWrapper: {
+    flex: 1,
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'flex-end',
+    alignItems: 'flex-start',
+    margin: '144px 0 0 0',
     '@media (max-width: 1300px)': {
       margin: '40px 0 0 0',
     },
@@ -252,10 +266,6 @@ function CourseContentSection() {
           </div>
           <div style={styles.introInfoPadding}>
             <div style={styles.infoWrapper}>
-              <p style={styles.infoTitle}>課程收費</p>
-              <div style={styles.priceWrapper}>
-                <p style={styles.infoText}>NT$3,500元</p>
-              </div>
               <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
             </div>
           </div>
@@ -263,7 +273,7 @@ function CourseContentSection() {
       </div>
       <div style={[styles.courseItem, styles.border]}>
         <img style={[styles.image, styles.imageMarginRight]} src={classPhoto5} alt="class" />
-        <div style={styles.InfoSmallWrapper}>
+        <div style={styles.infoSmallWrapper}>
           <div style={styles.introInfoWrapper}>
             <h2 style={styles.introInfoTitle}>各級證照同等技術課程</h2>
             <p style={styles.content}>
@@ -279,18 +289,14 @@ function CourseContentSection() {
               等同於證照課程內容，扣除證照課程最後一天的考試，課程結束後沒有證照。
             </p>
           </div>
-          <div style={styles.infoWrapper}>
-            <p style={styles.infoTitle}>課程收費</p>
-            <div style={styles.priceWrapper}>
-              <p style={styles.infoText}>NT$12,000元</p>
-            </div>
+          <div style={styles.infoSmallerWrapper}>
             <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>
       </div>
       <div style={[styles.courseItem, styles.border]}>
         <img style={[styles.image, styles.imageMarginRight]} src={classPhoto6} alt="class" />
-        <div style={styles.InfoSmallWrapper}>
+        <div style={styles.infoSmallWrapper}>
           <div style={styles.introInfoWrapper}>
             <h2 style={styles.introInfoTitle}>回娘家專案複習課程(一/二級)</h2>
             <p style={styles.content}>
@@ -312,10 +318,6 @@ function CourseContentSection() {
             </p>
           </div>
           <div style={styles.infoWrapper}>
-            <p style={styles.infoTitle}>課程收費</p>
-            <div style={styles.priceWrapper}>
-              <p style={styles.infoText}>NT$3,000元</p>
-            </div>
             <Button text="立即報名" url="http://t.cn/ReQCgvg" isThin />
           </div>
         </div>

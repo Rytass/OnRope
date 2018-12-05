@@ -220,7 +220,7 @@ function CoachSection() {
                 </div>
                 <div>
                   <p style={styles.infoTitle}>其他相關證照</p>
-                  <p style={styles.contentText}>建築物外牆安全檢查人員, SKYLOTEC PPE & PFPE 裝備檢查員，SKYLOTEC 米蘭基礎救援</p>
+                  <p style={styles.contentText}>建築物外牆安全檢查人員, SKYLOTEC PPE & PFPE 裝備檢查員，SKYLOTEC 米蘭基礎救援，吊籠操作員，屋頂作業主管</p>
                 </div>
               </div>
             </div>
