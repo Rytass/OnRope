@@ -4,7 +4,7 @@ import React, { PureComponent } from 'react';
 import radium from 'radium';
 import slideshow1 from '../static/images/slide-show-01.png';
 import slideshow2 from '../static/images/slide-show-02.png';
-import slideshow3 from '../static/images/slide-show-03.png';
+import slideshow3 from '../static/images/slide-show-03.jpg';
 
 const CHANGE_TIME = 5000;
 
