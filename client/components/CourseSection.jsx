@@ -112,11 +112,13 @@ const styles = {
       padding: '32px 0 0 0',
     },
     '@media (max-width: 874px) and (min-width: 480px)': {
+      width: '100%',
       flexDirection: 'column',
       alignItems: 'center',
       padding: 0,
     },
     '@media (max-width: 479px)': {
+      width: '100%',
       flexDirection: 'column',
       alignItems: 'center',
       padding: 0,
