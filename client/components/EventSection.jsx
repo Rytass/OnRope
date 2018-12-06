@@ -123,7 +123,7 @@ function EventSection() {
         <EventItem
           date="2017.2"
           image={event2}
-          contentTitle="綠色和平(台灣)-海洋減塑繩索舞道"
+          contentTitle="綠色和平(台灣)-海洋減塑繩索舞蹈"
           content={() => (
             <div>
               <div style={styles.firstContent}>
