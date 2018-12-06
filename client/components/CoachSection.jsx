@@ -194,12 +194,14 @@ function CoachSection() {
                   <p style={styles.contentText}>一般建築外牆檢測</p>
                 </div>
                 <div>
-                  <p style={styles.infoTitle}>教學經歷</p>
-                  <p style={styles.contentText}>各級繩索證照訓練官及考官</p>
-                  <p style={styles.contentText}>國際風力發電機大廠Vestas外籍工程師繩索證照課程講師</p>
-                  <p style={styles.contentText}>澳門中葡職業學校繩索課程受邀講師</p>
-                  <p style={styles.contentText}>現任國立台灣戲曲學院高空作業證照講師</p>
-                  <p style={styles.contentText}>為台灣唯一具資格核發工業繩索證照女教練</p>
+                  <div style={styles.infoContentWrapper}>
+                    <p style={styles.infoTitle}>教學經歷</p>
+                    <p style={styles.contentText}>各級繩索證照訓練官及考官</p>
+                    <p style={styles.contentText}>國際風力發電機大廠Vestas外籍工程師繩索證照課程講師</p>
+                    <p style={styles.contentText}>澳門中葡職業學校繩索課程受邀講師</p>
+                    <p style={styles.contentText}>現任國立台灣戲曲學院高空作業證照講師</p>
+                    <p style={styles.contentText}>為台灣唯一具資格核發工業繩索證照女教練</p>
+                  </div>
                 </div>
               </div>
               <div style={styles.infoWrapper}>
