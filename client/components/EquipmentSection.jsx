@@ -140,7 +140,7 @@ function EquipmentSection() {
         </div>
       </div>
       <div style={styles.footer}>
-        <span style={styles.footerText}>以上商品瀚登皆有代購</span>
+        <span style={styles.footerText}>以上商品泰鼎皆有代購</span>
         <span style={styles.footerText}>上課詢問/電話詢問02-2902-0376</span>
       </div>
       <EquipmentModal />

@@ -105,7 +105,7 @@ const styles = {
     width: 816,
     display: 'flex',
     flexDirection: 'row',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
     alignItems: 'flex-end',
     padding: '32px 0 0 0',
     '@media (max-width: 1023px) and (min-width: 480px)': {
@@ -202,22 +202,13 @@ function CourseSection() {
             <div style={styles.priceInfoWrapper}>
               <p style={styles.priceTitle}>日間課程</p>
             </div>
-            <Button text="個人報名" url="http://t.cn/RFIgZmd " isThin />
+            <Button text="報名" url="http://t.cn/RFIgZmd " isThin />
           </div>
           <div style={styles.infoBlock}>
             <div style={styles.priceInfoWrapper}>
-              <p style={styles.discountText}>(三人同行打8折)</p>
-              <p style={styles.discountText}>(五人同行打7折)</p>
-              <p style={styles.discountText}>(十人同行6.5折)</p>
+              <p style={styles.priceTitle}>夜間課程</p>
             </div>
-            <Button text="團體報名" url="https://reurl.cc/pmRx8" isThin />
-          </div>
-          <div style={styles.infoBlock}>
-            <div style={styles.priceInfoWrapper}>
-              <p style={styles.discountBigText}>L1證照班台中訓練場日夜間部</p>
-              <p style={styles.discountText}>台中市神岡區前寮路57-10號</p>
-            </div>
-            <Button text="台中場報名" url="https://docs.google.com/forms/d/1_6x5gOPCt4JtonZfHqHY5_lzohQu25-9b7L1oaT2Tnc/edit" isThin />
+            <Button text="報名" url="https://reurl.cc/pmRx8" isThin />
           </div>
         </div>
       </div>

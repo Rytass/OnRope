@@ -152,7 +152,7 @@ class MapSection extends PureComponent {
         <h2 style={styles.subtitle}>新北最亮眼最舒適的繩索訓練中心</h2>
         <div style={styles.map} id="map" />
         <div style={styles.infoWrapper}>
-          <h2 style={styles.infoTitle}>瀚登小將有限公司</h2>
+          <h2 style={styles.infoTitle}>泰鼎小將有限公司</h2>
           <h2 style={styles.infoSubtitle}>新北市泰山區中央路5巷32-1號</h2>
           <div style={styles.trafficWrapper}>
             <div style={styles.trafficBlock}>

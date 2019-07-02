@@ -231,10 +231,9 @@ function Footer() {
         <img src={logo} alt="logo" style={styles.logo} />
         <div style={styles.infoWrapper}>
           <div style={styles.companyBlock}>
-            <p style={styles.compantTitle}>瀚登小將有限公司</p>
+            <p style={styles.compantTitle}>泰鼎小將有限公司</p>
             <p style={styles.compantSubtitle}>Oh my rope CO., LTD</p>
-            <p style={styles.companyContent}>地址：臺北市南港區興中路44巷16號4樓</p>
-            <p style={styles.companyContent}>電話：(02)2783-9604</p>
+            <p style={styles.companyContent}>地址：臺北市中山區南京東路二段174號3樓</p>
             <p style={styles.copyright}>© Oh my rope training centre 2018</p>
           </div>
           <div style={styles.addressBlock}>
@@ -246,14 +245,14 @@ function Footer() {
             <span style={styles.linkTitle}>社群連結</span>
             <div>
               <a
-                href="https://www.facebook.com/Oh-My-Rope瀚登小將繩索訓練中心-2082857378646335/"
+                href="https://www.facebook.com/ohmyrope"
                 style={styles.fbLink}
                 target="_blank"
                 rel="noopener noreferrer">
                 <img src={fbIcon} alt="facebook-icon" style={styles.icon} />
               </a>
               <a
-                href="line://home/public/main?id=dhd6008w"
+                href="line://ti/p/yxhCUg0XpG"
                 target="_blank"
                 rel="noopener noreferrer">
                 <img src={atIcon} alt="at-icon" style={styles.icon} />

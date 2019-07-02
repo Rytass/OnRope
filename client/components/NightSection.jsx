@@ -159,10 +159,6 @@ function NightSection() {
         <h2 style={styles.title}>TRAA一級繩索技術證照夜間班開課了</h2>
         <p style={styles.subtitle}>取得證照不必請假被扣薪，只要拚晚上一樣可以學習並考取證照！</p>
         <div style={styles.infoWrapper}>
-          <p style={styles.infoTitle}>夜間課程時數</p>
-          <div style={styles.priceWrapper}>
-            <p style={styles.infoText}>7堂 / 共計28小時</p>
-          </div>
           <Button text="立即報名" url="https://reurl.cc/pmRx8" isThin />
           <div style={styles.image} />
         </div>

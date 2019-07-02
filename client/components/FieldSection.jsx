@@ -3,10 +3,10 @@
 import React from 'react';
 import radium from 'radium';
 import FieldImage from './elements/FieldImage.jsx';
-import place1 from '../static/images/place-01.png';
-import place2 from '../static/images/place-02.png';
-import place3 from '../static/images/place-03.png';
-import place4 from '../static/images/place-04.png';
+import place1 from '../static/images/place-01.jpg';
+import place2 from '../static/images/place-02.jpg';
+import place3 from '../static/images/place-03.jpg';
+import place4 from '../static/images/place-04.jpg';
 
 const styles = {
   wrapper: {
@@ -50,7 +50,7 @@ function FieldSection() {
         <FieldImage
           isBig
           title="五星級繩索訓練場地"
-          content="瀚登小將繩索訓練中心已通過TRAA 台灣繩索技術協會審查，成為TRAA核可的繩索技術訓練中心。現場有模擬塔讓學員攀登，以及模擬建築物外牆施作地形，劇場貓道作業模擬等，讓外場工作環境可以融入至訓練場練習。"
+          content="泰鼎小將繩索訓練中心已通過TRAA 台灣繩索技術協會審查，成為TRAA核可的繩索技術訓練中心。現場有模擬塔讓學員攀登，以及模擬建築物外牆施作地形，劇場貓道作業模擬等，讓外場工作環境可以融入至訓練場練習。"
           image={place1} />
       </div>
       <div style={styles.imagesWrapper}>
